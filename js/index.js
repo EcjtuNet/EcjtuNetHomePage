@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	/*
+	news slider
+	 */
 	var wrapper = $(".news_wrapper"),
 		icons = $(".slider li");
 
@@ -40,7 +43,26 @@ $(document).ready(function(){
     }).mouseout(function(){
 	    timer = setInterval(newsSlider,3000); 	
 	})   
+    /*
+    click .header_more goto #news
+     */
+    var more =$(".header_more"),
+    	news = $('#news');
 
-    //js无缝滚动代码
-
+    $(more).click(function(){
+    	timer2=setInterval(runToNews,1);
+    })
+    function runToNews(){  
+	    currentPosition=document.documentElement.scrollTop || document.body.scrollTop;  
+	    currentPosition+=7;  
+	    var newsTop = news.offset().top;
+	    if(currentPosition<newsTop+6)  
+	    {  
+	        window.scrollTo(0,currentPosition);  
+	    }  
+	    else  
+	    {  
+	        clearInterval(timer2);  
+	    }  
+	}
 })

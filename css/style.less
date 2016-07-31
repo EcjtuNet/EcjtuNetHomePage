@@ -62,11 +62,47 @@ index.css
 	margin:0;
 	padding:0;
 }
+html,body{
+  width:100%;
+  height:100%;
+}
 body{
   font-family: "HanSansCN-Light";
   font-size: 100%;
 }
 @a_hover:#2EA7C9;
+@a_hover_darker:#1A83A0;
+@keyframes moreMove{
+  0%{
+    bottom:27px;
+  }
+  35%{
+    bottom:43px;
+  }
+  40%{
+    bottom:37px;
+  }
+  90%{
+    bottom:23px;
+  }
+  98%{
+    bottom:25px;
+  }
+  99%{
+    bottom:26px;
+  }
+  100%{
+    bottom:27px;
+  }
+}
+@keyframes showMask{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
 .video{
   width:100%;
   height:756px;
@@ -74,7 +110,7 @@ body{
 }
 #header{
   width:100%;
-  height:756px;
+  height:100%;
   background-image: url(../images/index.jpg);
   background-size: cover;
   position:relative;
@@ -121,6 +157,14 @@ body{
     bottom:27px;
     left:50%;
     margin-left: -44px;
+    animation-name:moreMove;
+    -webkit-animation-name:moreMove;
+    animation-duration:1.3s;
+    -webkit-animation-duration:1.3s;
+    animation-fill-mode:both;
+    -webkit-animation-fill-mode:both;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
     .more{
       display:block;
       width:52px;
@@ -207,6 +251,9 @@ body{
         background-color: @a_hover;
         border-radius: 8px;
         padding: 24px 52px;
+        &:hover{
+          background-color: @a_hover_darker;
+        }
         img{
           width:125px;
           height:20px;
@@ -254,7 +301,14 @@ body{
     height:775px;
     background-size: cover;
     &:hover .mask{
-      opacity:1;
+      animation:showMask;
+      -webkit-animation:showMask;
+      animation-duration:.5s;
+      -webkit-animation-duration:.5s;
+      animation-fill-mode:both;
+      -webkit-animation-fill-mode:both;
+      animation-iteration-count:1;
+      -webkit-animation-iteration-count:1;
       box-shadow: 0 0 40px 4px #5B5B5B;
       z-index: 999;
     }
@@ -386,6 +440,9 @@ body{
               background-color: @a_hover;
               color:#fff;
               font-size: 17px;
+              &:hover{
+                background-color: @a_hover_darker;
+              }
             } 
           }
         }
@@ -406,50 +463,50 @@ body{
   overflow: none;
 }
 /*flexisel*/
-.nbs-flexisel-container {
-  position: relative;
-  max-width: 100%;
-}
-.nbs-flexisel-ul {
-  position: relative;
-  width: 9999px;
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-  text-align: center;
-}
-.nbs-flexisel-inner {
-  overflow: hidden;
-  margin: 0px auto;
-}
-.nbs-flexisel-item {
-  float: left;
-  margin: 0;
-  padding: 0px;
-  position: relative;
-}
-.nbs-flexisel-item > img {
-  cursor: pointer;
-  position: relative;
-}
-/*---- Nav ---*/
-.nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
-  width: 20px;
-  height: 34px;
-  position: absolute;
-  cursor: pointer;
-  z-index: 100;
-}
-.nbs-flexisel-nav-left {
-  left:0%;
-  top:50% !important;
-  //background: url(../images/2.png) no-repeat -37px -351px;
-}
-.nbs-flexisel-nav-right {
-  right:0%;
-  top:50% !important;
-  //background: url(../images/2.png) no-repeat -71px -351px;
-}
+  .nbs-flexisel-container {
+    position: relative;
+    max-width: 100%;
+  }
+  .nbs-flexisel-ul {
+    position: relative;
+    width: 9999px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+  }
+  .nbs-flexisel-inner {
+    overflow: hidden;
+    margin: 0px auto;
+  }
+  .nbs-flexisel-item {
+    float: left;
+    margin: 0;
+    padding: 0px;
+    position: relative;
+  }
+  .nbs-flexisel-item > img {
+    cursor: pointer;
+    position: relative;
+  }
+  /*---- Nav ---*/
+  .nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
+    width: 20px;
+    height: 34px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .nbs-flexisel-nav-left {
+    left:0%;
+    top:50% !important;
+    //background: url(../images/2.png) no-repeat -37px -351px;
+  }
+  .nbs-flexisel-nav-right {
+    right:0%;
+    top:50% !important;
+    //background: url(../images/2.png) no-repeat -71px -351px;
+  }
 
 .wechat{
   float:left;
@@ -654,6 +711,13 @@ body{
         }
       }
     }
+  }
+  .copyright{
+    color:#BFC0C2;
+    text-align: center;
+    font-size: 1.25rem;//20px
+    line-height: 2.5rem;//40px
+    margin-bottom: 50px;
   }
 }
 /*
