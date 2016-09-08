@@ -55,7 +55,7 @@ $(document).ready(function(){
     function runToNews(){  
 	    currentPosition=document.documentElement.scrollTop || document.body.scrollTop;  
 	    currentPosition+=7;  
-	    var newsTop = news.offset().top;
+	    var newsTop = (news.offset().top)-33;
 	    if(currentPosition<newsTop+6)  
 	    {  
 	        window.scrollTo(0,currentPosition);  
@@ -65,4 +65,30 @@ $(document).ready(function(){
 	        clearInterval(timer2);  
 	    }  
 	}
+	function scrollShowNav(){
+		$(window).scroll(function () {
+			//watch scroll distance timely
+        	var navTop = $(window).scrollTop(),
+        		navbar1 = $(".navbar1"),
+        		navbar2 = $(".navbar2");
+        	if(navTop>=33){
+        		navbar1.addClass('none');
+        		navbar2.removeClass('none');
+        	}else{
+        		navbar1.removeClass('none');
+        		navbar2.addClass('none');
+        	}
+        	console.log(navTop);
+
+		});
+		var menu = $(".menu"),
+			nav = $("#nav"),
+			li = nav.find("ul").find("li");
+		menu.bind("click",function(){
+			$(this).toggleClass('closer');
+			nav.slideToggle(600);
+		})
+	}
+	scrollShowNav();
+
 })
