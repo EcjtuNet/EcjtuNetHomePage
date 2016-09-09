@@ -913,10 +913,10 @@ body {
   background-color: #2EA7C9;
   color: #fff;
   font-size: 17px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 #map .content a:hover {
   background-color: #1A83A0;

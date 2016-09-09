@@ -96,13 +96,15 @@ scrollShowNav start
 
 		var menu = $(".menu"),
 			nav = $("#nav"),
-			li = nav.find("ul").find("li");
+			li = nav.find("ul").find("li"),
+			navbar_right = $(".navbar2 .anv");
 		menu.bind("click",function(){
 			$(this).toggleClass('closer');
 			nav.slideToggle(600);
 		})
 		li.bind("click",function(){
 			$(nav).slideUp(600);
+			$(menu).removeClass('closer');
 			// navbar2.css('opacity',0);
 			// $(window).bind("mousemove",function(){
 			// 	navbar2.css('opacity',1);
