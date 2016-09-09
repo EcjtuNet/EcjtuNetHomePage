@@ -347,6 +347,9 @@ body {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 #header nav .navbar-right .closer .nav_pub:before {
@@ -474,10 +477,15 @@ body {
 }
 #nav ul li a {
   color: #fff;
+  display: block;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 #nav ul li a:hover {
   color: #1A83A0;
+  transform: scale(1.1);
 }
 #nav ul li:nth-child(1) {
   margin-top: 12%;
@@ -519,9 +527,25 @@ body {
 #news .row {
   padding-bottom: 58px;
 }
-#news .row .h1_sub img {
+#news .row .heading .h1_sub img {
   width: 100%;
   height: 100%;
+}
+#news .row .heading .more {
+  font-size: 2.25rem;
+  color: #D0D0D0;
+  float: right;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#news .row .heading .more:hover {
+  color: #2EA7C9;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #news .content {
   float: left;
@@ -533,6 +557,9 @@ body {
   transition: all .3s ease;
 }
 #news .content:hover {
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
   transform: scale(0.95);
 }
 #news .content:hover .pic img {
@@ -605,17 +632,17 @@ body {
 #news .slider .active {
   background-color: #2EA7C9;
 }
-.blog {
+#blog {
   float: left;
   width: 100%;
 }
-.blog .sample {
+#blog .sample {
   float: left;
   width: 50%;
   height: 775px;
   background-size: cover;
 }
-.blog .sample:hover .mask {
+#blog .sample:hover .mask {
   animation: showMask;
   -webkit-animation: showMask;
   animation-duration: .5s;
@@ -627,95 +654,104 @@ body {
   box-shadow: 0 0 40px 4px #5B5B5B;
   z-index: 999;
 }
-.blog .mask {
+#blog .mask {
   opacity: 0;
   width: 100%;
   height: 100%;
   background-color: #2EA7C9;
   color: #F6F6F6;
 }
-.blog .mask .wrapper {
+#blog .mask .wrapper {
   width: 430px;
   padding-top: 122px;
   margin: 0 auto;
 }
-.blog .mask h1 {
+#blog .mask h1 {
   font-size: 5.8rem;
   text-align: center;
 }
-.blog .mask .icons {
+#blog .mask .icons {
   width: 376px;
   height: 74px;
   margin: 82px auto 75px;
 }
-.blog .mask .icons span {
+#blog .mask .icons span {
   height: 100%;
 }
-.blog .mask .icons img {
+#blog .mask .icons img {
   height: 100%;
 }
-.blog .mask .icons .icon1 {
+#blog .mask .icons .icon1 {
   float: left;
 }
-.blog .mask .icons .icon2 {
+#blog .mask .icons .icon2 {
   margin-left: 72px;
 }
-.blog .mask .icons .icon3 {
+#blog .mask .icons .icon3 {
   float: right;
 }
-.blog .mask p {
+#blog .mask p {
   font-size: 2.125rem;
   line-height: 4.3rem;
   text-align: left;
 }
-.blog .mask .detail {
+#blog .mask .detail {
   display: block;
   font-size: 2.5rem;
   margin-top: 55px;
   text-align: center;
 }
-.blog .blog1 {
+#blog .blog1 {
   background-image: url(../images/blog1.jpg);
 }
-.blog .blog2 {
+#blog .blog2 {
   background-image: url(../images/blog2.jpg);
 }
-.blog .sample_little {
+#blog .sample_little {
   width: 33.3%;
   float: left;
   height: 400px;
 }
-.blog .blog3 {
+#blog .blog3 {
   background-image: url(../images/blog3.jpg);
 }
-.blog .blog4 {
+#blog .blog4 {
   background-image: url(../images/blog4.jpg);
   position: relative;
 }
-.blog .blog4 .more {
+#blog .blog4 .more {
   position: absolute;
   width: 100px;
   height: 28px;
   left: 50%;
   margin-left: -50px;
   bottom: 12px;
+  transition: all 0.3s ease;
 }
-.blog .blog5 {
+#blog .blog4 .more:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#blog .blog5 {
   background-image: url(../images/blog5.jpg);
 }
-.college {
+#college {
   width: 100%;
   height: 883px;
+  overflow: hidden;
   float: left;
   background-image: url(../images/college.jpg);
 }
-.college .marquee_overflow {
+#college .marquee_overflow {
   margin-top: 87px;
+  height: 100%;
 }
-.college .marquee_overflow .marquee_wrapper {
+#college .marquee_overflow .marquee_wrapper {
   display: none;
 }
-.college .marquee_overflow .marquee_wrapper li {
+#college .marquee_overflow .marquee_wrapper li {
   height: 710px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -723,7 +759,7 @@ body {
   position: relative;
   display: inline-block;
 }
-.college .marquee_overflow .marquee_wrapper li .li_wrapper {
+#college .marquee_overflow .marquee_wrapper li .li_wrapper {
   margin: 25px 100px;
   height: 660px;
   background-color: #fff;
@@ -731,21 +767,21 @@ body {
   border-radius: 5px;
   position: relative;
 }
-.college .marquee_overflow .marquee_wrapper li .li_wrapper img {
+#college .marquee_overflow .marquee_wrapper li .li_wrapper img {
   display: block;
   width: 260px;
   height: 360px;
   padding: 30px 0 70px;
   margin: 0 auto;
 }
-.college .marquee_overflow .marquee_wrapper li .li_wrapper p {
+#college .marquee_overflow .marquee_wrapper li .li_wrapper p {
   width: 260px;
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.06rem;
   color: #7F7F7F;
 }
-.college .marquee_overflow .marquee_wrapper li .li_wrapper a {
+#college .marquee_overflow .marquee_wrapper li .li_wrapper a {
   position: absolute;
   bottom: 47px;
   left: 50%;
@@ -765,15 +801,15 @@ body {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.college .marquee_overflow .marquee_wrapper li .li_wrapper a:hover {
+#college .marquee_overflow .marquee_wrapper li .li_wrapper a:hover {
   background-color: #1A83A0;
 }
 .li_wrapper:hover {
   height: 120%;
-  transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -o-transform: scale(1.1);
   -moz-transform: scale(1.1);
+  transform: scale(1.1);
   opacity: 0.75;
   box-shadow: -3px 0 40px 4px #a9a9a9;
   -webkit-transition: all ease 0.5s 0;
@@ -786,6 +822,7 @@ body {
 .nbs-flexisel-container {
   position: relative;
   max-width: 100%;
+  height: 100%;
 }
 .nbs-flexisel-ul {
   position: relative;
@@ -796,6 +833,7 @@ body {
   text-align: center;
 }
 .nbs-flexisel-inner {
+  height: 100%;
   overflow: hidden;
   margin: 0px auto;
 }
@@ -820,41 +858,50 @@ body {
 }
 .nbs-flexisel-nav-left {
   left: 0%;
-  top: 50% !important;
+  top: 15% !important;
+  background: url(../images/arrow2.png) no-repeat 0 0;
 }
 .nbs-flexisel-nav-right {
   right: 0%;
-  top: 50% !important;
+  top: 15% !important;
+  background: url(../images/arrow2.png) no-repeat 100% 0;
 }
-.map {
+#map {
   float: left;
   width: 100%;
   height: 426px;
   position: relative;
 }
-.map .wrapper {
+#map .wrapper {
   width: 100%;
   height: 100%;
   float: left;
   background-image: url(../images/map.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.map .content {
+#map .content {
   float: left;
   position: absolute;
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   margin: 95px auto auto;
 }
-.map .content h1 {
+#map .content h1 {
   font-size: 4.375rem;
   font-weight: bold;
   color: #fff;
   text-indent: 11px;
   text-align: center;
 }
-.map .content a {
+#map .content a {
   display: block;
   width: 170px;
   height: 55px;
@@ -871,17 +918,17 @@ body {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.map .content a:hover {
+#map .content a:hover {
   background-color: #1A83A0;
 }
-.wechat {
+#wechat {
   float: left;
   width: 100%;
   height: 470px;
   background-color: #F3F3F3;
   position: relative;
 }
-.wechat .wrapper {
+#wechat .wrapper {
   width: 872px;
   height: 380px;
   overflow: hidden;
@@ -889,20 +936,20 @@ body {
   bottom: 0;
   right: 13.9%;
 }
-.wechat .wrapper .iphone {
+#wechat .wrapper .iphone {
   width: 336px;
   float: left;
 }
-.wechat .wrapper .content {
+#wechat .wrapper .content {
   float: right;
   width: 346px;
 }
-.wechat .wrapper h1 {
+#wechat .wrapper h1 {
   font-size: 2.93rem;
   line-height: 6.125rem;
   color: #686868;
 }
-.wechat .wrapper .readmore {
+#wechat .wrapper .readmore {
   display: block;
   width: 260px;
   height: 85px;
@@ -922,58 +969,58 @@ body {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.wechat .wrapper .readmore:hover {
+#wechat .wrapper .readmore:hover {
   background-color: #2EA7C9;
   color: #fff;
 }
 #news h1,
-.service h1 {
+#service h1 {
   font-size: 4.125rem;
   color: #99A0A5;
   display: block;
   margin-top: 77px;
 }
 #news h1 .h1_sub,
-.service h1 .h1_sub {
+#service h1 .h1_sub {
   display: inline-block;
   margin-left: 18px;
 }
-.service {
+#service {
   width: 100%;
   float: left;
   background-color: #F6F6F6;
 }
-.service .container {
+#service .container {
   height: 100%;
   position: relative;
 }
-.service .row {
+#service .row {
   height: 100%;
   padding-bottom: 143px;
 }
-.service .PE,
-.service .lecture,
-.service .exam,
-.service .evaluate {
+#service .PE,
+#service .lecture,
+#service .exam,
+#service .evaluate {
   margin-top: 135px;
 }
-.service .PE a,
-.service .lecture a,
-.service .exam a,
-.service .evaluate a {
+#service .PE a,
+#service .lecture a,
+#service .exam a,
+#service .evaluate a {
   display: block;
   width: 184px;
   height: 372px;
   position: relative;
 }
-.service .pic1 {
+#service .pic1 {
   display: inline-block;
   width: 100%;
   height: 168px;
   background-repeat: no-repeat;
   background-size: contain;
 }
-.service .pic2 {
+#service .pic2 {
   display: inline-block;
   position: absolute;
   width: 100%;
@@ -983,114 +1030,150 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.service .lecture,
-.service .exam,
-.service .evaluate {
+#service .lecture,
+#service .exam,
+#service .evaluate {
   margin-left: 4.4%;
 }
-.service .lecture .pic2 {
+#service .lecture .pic2 {
   margin-left: 20px;
   height: 53px;
 }
-.service .exam .pic1 {
+#service .exam .pic1 {
   width: 156px;
   height: 55px;
   margin-top: 61px;
   margin-left: 20px;
 }
-.service .PE .pic1 {
+#service .PE .pic1 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/PE1.png);
 }
-.service .PE .pic2 {
+#service .PE .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/PE2.png);
 }
-.service .PE a:hover .pic1 {
+#service .PE a:hover .pic1 {
   background-image: url(../images/PE1_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .PE a:hover .pic2 {
+#service .PE a:hover .pic2 {
   background-image: url(../images/PE2_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .lecture .pic1 {
+#service .lecture .pic1 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/lecture1.png);
 }
-.service .lecture .pic2 {
+#service .lecture .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/lecture2.png);
 }
-.service .lecture a:hover .pic1 {
+#service .lecture a:hover .pic1 {
   background-image: url(../images/lecture1_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .lecture a:hover .pic2 {
+#service .lecture a:hover .pic2 {
   background-image: url(../images/lecture2_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .exam .pic1 {
+#service .exam .pic1 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/exam1.png);
 }
-.service .exam .pic2 {
+#service .exam .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/exam2.png);
 }
-.service .exam a:hover .pic1 {
+#service .exam a:hover .pic1 {
   background-image: url(../images/exam1_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .exam a:hover .pic2 {
+#service .exam a:hover .pic2 {
   background-image: url(../images/exam2_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .evaluate .pic1 {
+#service .evaluate .pic1 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/evaluate1.png);
 }
-.service .evaluate .pic2 {
+#service .evaluate .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-image: url(../images/evaluate2.png);
 }
-.service .evaluate a:hover .pic1 {
+#service .evaluate a:hover .pic1 {
   background-image: url(../images/evaluate1_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .evaluate a:hover .pic2 {
+#service .evaluate a:hover .pic2 {
   background-image: url(../images/evaluate2_after.png);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.service .more {
+#service .more {
   position: absolute;
   font-size: 2.25rem;
   color: #D0D0D0;
   right: 268px;
   bottom: 25px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-.service .more:hover {
+#service .more:hover {
   color: #2EA7C9;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #footer {
   width: 100%;
@@ -1151,12 +1234,12 @@ resposive_layout
     padding-top: 141px;
   }
   #news h1,
-  .service h1 {
+  #service h1 {
     font-size: 3.125rem;
     margin-top: 50px;
   }
   #news h1 .h1_sub,
-  .service h1 .h1_sub {
+  #service h1 .h1_sub {
     margin-left: 13px;
   }
   #news .row .content .info {
@@ -1183,51 +1266,51 @@ resposive_layout
   #news .row .content2 {
     margin: 100px auto 52px auto;
   }
-  .blog .sample {
+  #blog .sample {
     height: 586px;
   }
-  .blog .sample_little {
+  #blog .sample_little {
     height: 302px;
   }
-  .blog .mask .wrapper {
+  #blog .mask .wrapper {
     width: 326px;
     padding-top: 93px;
   }
-  .blog .mask h1 {
+  #blog .mask h1 {
     font-size: 4.31rem;
     text-align: center;
   }
-  .blog .mask .icons {
+  #blog .mask .icons {
     width: 292px;
     height: 57px;
     margin: 64px auto 59px;
   }
-  .blog .mask .icons .icon2 {
+  #blog .mask .icons .icon2 {
     margin-left: 56px;
   }
-  .blog .mask p {
+  #blog .mask p {
     font-size: 1.625rem;
     line-height: 3.125rem;
   }
-  .blog .mask .detail {
+  #blog .mask .detail {
     font-size: 2rem;
     margin-top: 45px;
   }
-  .blog .blog4 .more {
+  #blog .blog4 .more {
     width: 76px;
     height: 23px;
     margin-left: -38px;
   }
-  .college {
+  #college {
     height: 672px;
   }
-  .college .marquee_overflow {
+  #college .marquee_overflow {
     margin-top: 58px;
   }
-  .college .marquee_overflow .marquee_wrapper li {
+  #college .marquee_overflow .marquee_wrapper li {
     height: 540px;
   }
-  .college .marquee_overflow .marquee_wrapper li .li_wrapper {
+  #college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin: 20px 50px;
     height: 500px;
     background-color: #fff;
@@ -1235,17 +1318,17 @@ resposive_layout
     border-radius: 5px;
     position: relative;
   }
-  .college .marquee_overflow .marquee_wrapper li .li_wrapper img {
+  #college .marquee_overflow .marquee_wrapper li .li_wrapper img {
     width: 195px;
     height: 272px;
     padding: 23px 0 54px;
   }
-  .college .marquee_overflow .marquee_wrapper li .li_wrapper p {
+  #college .marquee_overflow .marquee_wrapper li .li_wrapper p {
     width: 195px;
     font-size: 0.81rem;
     line-height: 0.93rem;
   }
-  .college .marquee_overflow .marquee_wrapper li .li_wrapper a {
+  #college .marquee_overflow .marquee_wrapper li .li_wrapper a {
     width: 128px;
     height: 40px;
     line-height: 40px;
@@ -1254,82 +1337,82 @@ resposive_layout
     left: 50%;
     margin-left: -64px;
   }
-  .map {
+  #map {
     height: 322px;
   }
-  .map .content {
+  #map .content {
     margin: 95px auto auto;
   }
-  .map .content h1 {
+  #map .content h1 {
     font-size: 3.125rem;
     text-indent: 20px;
   }
-  .map .content a {
+  #map .content a {
     width: 128px;
     height: 40px;
     line-height: 40px;
     margin: 50px auto auto;
   }
-  .wechat {
+  #wechat {
     height: 356px;
   }
-  .wechat .wrapper {
+  #wechat .wrapper {
     width: 667px;
     height: 280px;
   }
-  .wechat .wrapper .iphone {
+  #wechat .wrapper .iphone {
     width: 258px;
   }
-  .wechat .wrapper .content {
+  #wechat .wrapper .content {
     width: 268px;
   }
-  .wechat .wrapper h1 {
+  #wechat .wrapper h1 {
     font-size: 2.31rem;
     line-height: 4.625rem;
   }
-  .wechat .wrapper .readmore {
+  #wechat .wrapper .readmore {
     width: 195px;
     height: 65px;
     line-height: 65px;
     font-size: 1.25rem;
     box-shadow: -3px 3px 6px 1px #CBCBCB;
   }
-  .service .row {
+  #service .row {
     padding-bottom: 107px;
   }
-  .service .PE,
-  .service .lecture,
-  .service .exam,
-  .service .evaluate {
+  #service .PE,
+  #service .lecture,
+  #service .exam,
+  #service .evaluate {
     margin-top: 110px;
   }
-  .service .PE a,
-  .service .lecture a,
-  .service .exam a,
-  .service .evaluate a {
+  #service .PE a,
+  #service .lecture a,
+  #service .exam a,
+  #service .evaluate a {
     width: 140px;
     height: 270px;
   }
-  .service .pic1 {
+  #service .pic1 {
     height: 121px;
   }
-  .service .pic2 {
+  #service .pic2 {
     height: 37px;
   }
-  .service .lecture,
-  .service .exam,
-  .service .evaluate {
+  #service .lecture,
+  #service .exam,
+  #service .evaluate {
     margin-left: 4.4%;
   }
-  .service .lecture .pic2 {
+  #service .lecture .pic2 {
     height: 43px;
   }
-  .service .exam .pic1 {
+  #service .exam .pic1 {
     width: 110px;
     height: 40px;
     margin-top: 39px;
   }
-  .service .more {
+  #service .more {
     font-size: 1.75rem;
     right: 200px;
   }
@@ -1393,11 +1476,11 @@ resposive_layout
   #news .content2 .info {
     margin-top: 20px;
   }
-  .service .lecture,
-  .service .evaluate {
+  #service .lecture,
+  #service .evaluate {
     margin-left: 0;
   }
-  .service .exam {
+  #service .exam {
     margin-left: 16.66%;
   }
   #footer .links {
@@ -1417,16 +1500,16 @@ resposive_layout
   #nav ul li:nth-child(5) {
     margin-top: 5%;
   }
-  .college .marquee_overflow .marquee_wrapper li .li_wrapper {
+  #college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin: 20px 150px;
   }
-  .service .exam {
+  #service .exam {
     margin-left: 0;
   }
-  .service .PE a,
-  .service .evaluate a,
-  .service .exam a,
-  .service .lecture a {
+  #service .PE a,
+  #service .evaluate a,
+  #service .exam a,
+  #service .lecture a {
     margin: 0 auto;
     height: 200px;
   }

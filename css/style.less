@@ -260,6 +260,9 @@ body{
 			    -webkit-transition: all 0.5s ease;
 			    -moz-transition: all 0.5s ease;
 			    -o-transition: all 0.5s ease;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
 			    transform: rotate(-45deg);
 			}
 			.closer .nav_pub:before {
@@ -388,9 +391,14 @@ body{
 			text-align: center;
       a{
         color:#fff;
+        display:block;
+        -webkit-transition:all 0.4s ease;
+        -moz-transition:all 0.4s ease;
+        -o-transition:all 0.4s ease;
         transition:all 0.4s ease;
         &:hover{
           color:@a_hover_darker;
+          transform:scale(1.1);
         } 
       } 
       
@@ -436,12 +444,31 @@ body{
   }
   .row{
       padding-bottom: 58px;
-      .h1_sub{
-        img{
-          width:100%;
-          height:100%;
-        }
-      }      
+      .heading{
+        .h1_sub{
+          img{
+            width:100%;
+            height:100%;
+          }
+        } 
+        .more{
+          font-size: 2.25rem;
+          color: #D0D0D0;
+          float: right;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          &:hover{
+            color:@a_hover;
+            -webkit-transform:scale(1.1);
+            -moz-transform:scale(1.1);
+            -o-transform:scale(1.1);
+            transform:scale(1.1);
+          }
+        } 
+      }
+            
   }
   .content{
     float:left;
@@ -453,6 +480,9 @@ body{
     transition:all .3s ease;
     // height:33.625rem;//538px
     &:hover {
+      -webkit-transform:scale(0.95);
+      -moz-transform:scale(0.95);
+      -o-transform:scale(0.95);
       transform:scale(0.95);
     }
     &:hover .pic img{
@@ -533,7 +563,7 @@ body{
     }
   }
 }
-.blog{
+#blog{
   float:left;
   width:100%;
   .sample{
@@ -626,19 +656,28 @@ body{
       left:50%;
       margin-left: -50px;
       bottom:12px;
+      transition:all 0.3s ease;
+      &:hover{
+        -webkit-transform:scale(1.2);
+        -moz-transform:scale(1.2);
+        -o-transform:scale(1.2);
+        transform:scale(1.2);
+      }
     }
   }
   .blog5{
     background-image: url(../images/blog5.jpg);
   }
 }
-.college{
+#college{
   width:100%;
   height:883px;
+  overflow:hidden;
   float:left;
   background-image:url(../images/college.jpg);
   .marquee_overflow{
     margin-top: 87px;
+    height:100%;
     .marquee_wrapper{
       display:none;
         li{
@@ -699,10 +738,10 @@ body{
 }
 .li_wrapper:hover{
   height:120%;
-  transform:scale(1.1);
   -webkit-transform:scale(1.1);
   -o-transform:scale(1.1);
   -moz-transform:scale(1.1);
+  transform:scale(1.1);
   opacity:0.75;
   box-shadow: -3px 0 40px 4px #a9a9a9;
   -webkit-transition:all ease 0.5s 0;
@@ -715,6 +754,7 @@ body{
   .nbs-flexisel-container {
     position: relative;
     max-width: 100%;
+    height:100%;
   }
   .nbs-flexisel-ul {
     position: relative;
@@ -725,6 +765,7 @@ body{
     text-align: center;
   }
   .nbs-flexisel-inner {
+    height: 100%;
     overflow: hidden;
     margin: 0px auto;
   }
@@ -748,15 +789,15 @@ body{
   }
   .nbs-flexisel-nav-left {
     left:0%;
-    top:50% !important;
-    //background: url(../images/2.png) no-repeat -37px -351px;
+    top:15% !important;
+    background: url(../images/arrow2.png) no-repeat 0 0;
   }
   .nbs-flexisel-nav-right {
     right:0%;
-    top:50% !important;
-    //background: url(../images/2.png) no-repeat -71px -351px;
+    top:15% !important;
+    background: url(../images/arrow2.png) no-repeat 100% 0;
   }
-.map{
+#map{
   float:left;
   width:100%;
   height:426px;
@@ -768,11 +809,18 @@ body{
     background-image: url(../images/map.jpg);
     background-size: cover;
     background-repeat:no-repeat; 
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
   }
   .content{
     float: left;
     position:absolute;
     left: 50%;
+    -webkit-transform:translate(-50%, 0);
+    -moz-transform:translate(-50%, 0);
+    -o-transform:translate(-50%, 0);
     transform: translate(-50%, 0);
     margin: 95px auto auto;
     h1{
@@ -804,7 +852,7 @@ body{
     }
   }
 }
-.wechat{
+#wechat{
   float:left;
   width:100%;
   height:470px;
@@ -856,7 +904,7 @@ body{
     }
   }  
 }
-#news h1,.service h1{
+#news h1,#service h1{
   font-size: 4.125rem;//66px
   color:#99A0A5;
   display:block;
@@ -866,7 +914,7 @@ body{
     margin-left: 18px;
   }
 }
-.service{
+#service{
   width:100%;
   float:left;
   background-color: #F6F6F6;
@@ -933,9 +981,17 @@ body{
   }
   .PE a:hover .pic1{
     background-image: url(../images/PE1_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
   }
   .PE a:hover .pic2{
     background-image: url(../images/PE2_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
   }
   .lecture .pic1{
   	-webkit-transition: all 0.4s ease;
@@ -953,9 +1009,17 @@ body{
   }
   .lecture a:hover .pic1{
     background-image: url(../images/lecture1_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1); 
   }
   .lecture a:hover .pic2{
     background-image: url(../images/lecture2_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
   }
   .exam .pic1{
     -webkit-transition: all 0.4s ease;
@@ -973,9 +1037,17 @@ body{
   }
   .exam a:hover .pic1{
     background-image: url(../images/exam1_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
   }
   .exam a:hover .pic2{
     background-image: url(../images/exam2_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
   }
   .evaluate .pic1{
   	-webkit-transition: all 0.4s ease;
@@ -993,9 +1065,17 @@ body{
   }
   .evaluate a:hover .pic1{
     background-image: url(../images/evaluate1_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
   }
   .evaluate a:hover .pic2{
     background-image: url(../images/evaluate2_after.png);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
   }
   .more{
     position:absolute;
@@ -1003,12 +1083,16 @@ body{
     color:#D0D0D0;
     right: 268px;
     bottom:25px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     &:hover{
       color:@a_hover;
+      -webkit-transform:scale(1.1);
+      -moz-transform:scale(1.1);
+      -o-transform:scale(1.1);
+      transform:scale(1.1);
     }
   }
 }
@@ -1072,7 +1156,7 @@ resposive_layout
       padding-top: 141px;
     }
   }
-  #news h1,.service h1{
+  #news h1,#service h1{
     font-size: 3.125rem;//50px
     margin-top: 50px;
     .h1_sub{
@@ -1109,7 +1193,7 @@ resposive_layout
     margin:100px auto 52px auto;
     }
   } 
-  .blog{
+  #blog{
     .sample{
       height:586px;
     }
@@ -1148,7 +1232,7 @@ resposive_layout
       margin-left: -38px;
     }
   }
-  .college{
+  #college{
     height:672px;
     .marquee_overflow{
       margin-top: 58px;
@@ -1188,7 +1272,7 @@ resposive_layout
       }
     }
   }
-  .map{
+  #map{
     height:322px;
     .content{
       margin: 95px auto auto;
@@ -1204,7 +1288,7 @@ resposive_layout
       }
     }
   }
-  .wechat{
+  #wechat{
     height:356px;
     .wrapper{
       width:667px;
@@ -1228,7 +1312,7 @@ resposive_layout
       }
     }  
   }
-  .service{
+  #service{
     .row{
       padding-bottom: 107px;
     }
@@ -1339,7 +1423,7 @@ resposive_layout
     }
   }
   
-  .service{
+  #service{
     .lecture,.evaluate{
       margin-left: 0;
     }
@@ -1371,10 +1455,10 @@ resposive_layout
       margin-top: 5%;
     }
   }
-  .college .marquee_overflow .marquee_wrapper li .li_wrapper {
+  #college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin:20px 150px;
   }
-  .service{
+  #service{
     .exam{
       margin-left: 0;
     }
