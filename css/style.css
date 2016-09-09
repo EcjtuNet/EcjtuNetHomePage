@@ -190,10 +190,21 @@ body {
 .none {
   display: none;
 }
+.blur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
 .video {
   width: 100%;
   height: 756px;
   background-size: cover;
+}
+.map2 {
+  width: 100%;
+  height: 100%;
 }
 #header {
   width: 100%;
@@ -460,6 +471,13 @@ body {
   font-size: 45px;
   color: #fff;
   text-align: center;
+}
+#nav ul li a {
+  color: #fff;
+  transition: all 0.4s ease;
+}
+#nav ul li a:hover {
+  color: #1A83A0;
 }
 #nav ul li:nth-child(1) {
   margin-top: 12%;
@@ -808,6 +826,54 @@ body {
   right: 0%;
   top: 50% !important;
 }
+.map {
+  float: left;
+  width: 100%;
+  height: 426px;
+  position: relative;
+}
+.map .wrapper {
+  width: 100%;
+  height: 100%;
+  float: left;
+  background-image: url(../images/map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.map .content {
+  float: left;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 95px auto auto;
+}
+.map .content h1 {
+  font-size: 4.375rem;
+  font-weight: bold;
+  color: #fff;
+  text-indent: 11px;
+  text-align: center;
+}
+.map .content a {
+  display: block;
+  width: 170px;
+  height: 55px;
+  margin: 97px auto auto;
+  line-height: 55px;
+  text-align: center;
+  border: 0;
+  border-radius: 6px;
+  background-color: #2EA7C9;
+  color: #fff;
+  font-size: 17px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.map .content a:hover {
+  background-color: #1A83A0;
+}
 .wechat {
   float: left;
   width: 100%;
@@ -1081,6 +1147,9 @@ resposive_layout
   .container {
     width: 1074px;
   }
+  #header .content {
+    padding-top: 141px;
+  }
   #news h1,
   .service h1 {
     font-size: 3.125rem;
@@ -1185,6 +1254,22 @@ resposive_layout
     left: 50%;
     margin-left: -64px;
   }
+  .map {
+    height: 322px;
+  }
+  .map .content {
+    margin: 95px auto auto;
+  }
+  .map .content h1 {
+    font-size: 3.125rem;
+    text-indent: 20px;
+  }
+  .map .content a {
+    width: 128px;
+    height: 40px;
+    line-height: 40px;
+    margin: 50px auto auto;
+  }
   .wechat {
     height: 356px;
   }
@@ -1284,10 +1369,10 @@ resposive_layout
     width: 744px;
   }
   #nav ul li {
-    height: 20%;
+    height: 12%;
   }
   #nav ul li:nth-child(1) {
-    margin-top: 14%;
+    margin-top: 15%;
   }
   #nav ul li:nth-child(5) {
     margin-top: 5%;
@@ -1322,6 +1407,15 @@ resposive_layout
 @media (max-width: 768px) {
   .container {
     width: 576px;
+  }
+  #nav ul li {
+    height: 10%;
+  }
+  #nav ul li:nth-child(1) {
+    margin-top: 30%;
+  }
+  #nav ul li:nth-child(5) {
+    margin-top: 5%;
   }
   .college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin: 20px 150px;

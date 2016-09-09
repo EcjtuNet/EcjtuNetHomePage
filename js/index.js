@@ -1,7 +1,8 @@
 $(document).ready(function(){
-	/*
-	news slider
-	 */
+/*
+news slider start
+ */
+ 	// console.log("一张网页，要经历怎样的过程，才能抵达用户面前？一位新人，要经历怎样的成长，才能站在技术之巅？探寻这里的秘密；体验这里的挑战；成为这里的主人；一同加入华东交通大学日新网技术中心把！ http://hr.ecjtu.net/");
 	var wrapper = $(".news_wrapper"),
 		icons = $(".slider li");
 
@@ -43,19 +44,25 @@ $(document).ready(function(){
     }).mouseout(function(){
 	    timer = setInterval(newsSlider,3000); 	
 	})   
-    /*
-    click .header_more goto #news
-     */
+/*
+news slider end
+ */
+
+/*
+runToNews start
+ */	
     var more =$(".header_more"),
     	news = $('#news');
 
     $(more).click(function(){
     	timer2=setInterval(runToNews,1);
     })
+
     function runToNews(){  
 	    currentPosition=document.documentElement.scrollTop || document.body.scrollTop;  
 	    currentPosition+=7;  
-	    var newsTop = (news.offset().top)-33;
+	    var	nav = document.getElementsByClassName("navbar2");
+	    var newsTop = (news.offset().top)-nav[0].clientHeight;
 	    if(currentPosition<newsTop+6)  
 	    {  
 	        window.scrollTo(0,currentPosition);  
@@ -65,6 +72,13 @@ $(document).ready(function(){
 	        clearInterval(timer2);  
 	    }  
 	}
+/*
+runToNews end
+ */
+
+/*
+scrollShowNav start
+ */
 	function scrollShowNav(){
 		$(window).scroll(function () {
 			//watch scroll distance timely
@@ -78,7 +92,7 @@ $(document).ready(function(){
         		navbar1.removeClass('none');
         		navbar2.addClass('none');
         	}
-        	console.log(navTop);
+        	//console.log(navTop);
 
 		});
 		var menu = $(".menu"),
@@ -90,5 +104,24 @@ $(document).ready(function(){
 		})
 	}
 	scrollShowNav();
+/*
+scrollShowNav end
+ */
 
+/*
+scrollShowNav start
+ */
+    (function map(){
+    	var map = $(".map"),
+    		wrapper = $(".map .wrapper");
+    	map.bind('mouseover', function() {
+    		$(wrapper).removeClass('blur');
+    	}).bind("mouseout",function(){
+			$(wrapper).addClass('blur');
+    	});
+
+    }())
+/*
+scrollShowNav end
+ */
 })

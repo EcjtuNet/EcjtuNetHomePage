@@ -106,10 +106,21 @@ body{
 .none{
   display: none;
 }
+.blur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
 .video{
   width:100%;
   height:756px;
   background-size: cover;
+}
+.map2{
+  width:100%;
+  height: 100%;
 }
 #header{
 	width:100%;
@@ -374,7 +385,15 @@ body{
 			height: 11%;
 			font-size:45px;
 			color:#fff;
-			text-align: center; 
+			text-align: center;
+      a{
+        color:#fff;
+        transition:all 0.4s ease;
+        &:hover{
+          color:@a_hover_darker;
+        } 
+      } 
+      
 		}
 		li:nth-child(1){
 			margin-top: 12%;
@@ -737,7 +756,54 @@ body{
     top:50% !important;
     //background: url(../images/2.png) no-repeat -71px -351px;
   }
-
+.map{
+  float:left;
+  width:100%;
+  height:426px;
+  position:relative;
+  .wrapper{
+    width:100%;
+    height:100%;
+    float: left;
+    background-image: url(../images/map.jpg);
+    background-size: cover;
+    background-repeat:no-repeat; 
+  }
+  .content{
+    float: left;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 95px auto auto;
+    h1{
+      font-size: 4.375rem;//70px
+      font-weight: bold;
+      color:#fff;
+      text-indent:11px;
+      text-align: center; 
+    }
+    a{
+      display:block;
+      width:170px;
+      height: 55px;
+      margin:97px auto auto;
+      line-height: 55px;
+      text-align: center;
+      border:0;
+      border-radius: 6px;
+      background-color: @a_hover;
+      color:#fff;
+      font-size: 17px;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      &:hover{
+        background-color: @a_hover_darker;
+      }
+    }
+  }
+}
 .wechat{
   float:left;
   width:100%;
@@ -1002,6 +1068,9 @@ resposive_layout
     width: 1074px;
   }
   #header{
+    .content{
+      padding-top: 141px;
+    }
   }
   #news h1,.service h1{
     font-size: 3.125rem;//50px
@@ -1119,6 +1188,22 @@ resposive_layout
       }
     }
   }
+  .map{
+    height:322px;
+    .content{
+      margin: 95px auto auto;
+      h1{
+        font-size: 3.125rem;//50px
+        text-indent:20px; 
+      }
+      a{
+        width:128px;
+        height: 40px;
+        line-height: 40px;
+        margin:50px auto auto;
+      }
+    }
+  }
   .wechat{
     height:356px;
     .wrapper{
@@ -1219,16 +1304,21 @@ resposive_layout
   .container {
     width: 744px;
   }
+  // #header{
+  //   .content{
+  //     padding-top: 50%;
+  //   }
+  // }
   #nav ul{
-	li{
-		height: 20%;
-	}
-	li:nth-child(1){
-		margin-top: 14%;
-	}
-	li:nth-child(5){
-		margin-top: 5%;
-	}
+  	li{
+  		height: 12%;
+  	}
+  	li:nth-child(1){
+  		margin-top: 15%;
+  	}
+  	li:nth-child(5){
+  		margin-top: 5%;
+  	}
   }
   #news{
     .content .info{
@@ -1264,6 +1354,22 @@ resposive_layout
 @media (max-width: 768px) {//xs
   .container {
     width: 576px;
+  }
+  // #header{
+  //   .content{
+  //     padding-top: 200px;
+  //   }
+  // }
+  #nav ul{
+    li{
+      height: 10%;
+    }
+    li:nth-child(1){
+      margin-top: 30%;
+    }
+    li:nth-child(5){
+      margin-top: 5%;
+    }
   }
   .college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin:20px 150px;
