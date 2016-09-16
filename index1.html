@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta content="all" name="robots"/>
+    <meta name="author" content="Ecjtu.net"/>
+    <meta name="description" content="{dede:global.cfg_description/}"/>
+    <meta name="keywords" content="{dede:global.cfg_keywords/}"/>
+    <meta name="baidu-tc-verification" content="ee1e74f7f23e053355570e1e5ebd24b7"/>
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myCss.css">
+</head>
+<body>
+<!-- <img class="video" src="images/index.jpg" alt="">
+ -->
+<div id="header">
+    <nav class="navbar navbar1">
+        <div class="container">
+            <div class="row">
+                <ul class="nav navbar-nav navbar-left">
+                    <a class="nav_logo" href="http://www.ecjtu.net">
+                        <img src="images/images/logo.png">
+                    </a>
+                    <ul class="nav navbar-nav rixin_desc">
+                        <li class="rixin_name">日新</li>
+                        <li class="rixin_name2">RiXin</li>
+                    </ul>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="javascript:void(0)" class="menu">
+                        <span class="nav_menu">菜单</span>
+                        <span class="nav_pub"></span>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar2 none">
+        <div class="container">
+            <div class="row">
+                <ul class="nav navbar-nav navbar-left">
+                    <a class="nav_logo" href="http://www.ecjtu.net">
+                        <img src="images/images/logo2.png">
+                    </a>
+                    <ul class="nav navbar-nav rixin_desc">
+                        <li class="rixin_name">日新</li>
+                        <li class="rixin_name2">RiXin</li>
+                    </ul>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="javascript:void(0)" class="menu">
+                        <span class="nav_menu">菜单</span>
+                        <span class="nav_pub"></span>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h1 class="motto">日新其德<span>止于至善</span></h1>
+        <ul>
+            <li>资讯<span>·</span></li>
+            <li>技术<span>·</span></li>
+            <li>服务<span>·</span></li>
+            <li>更多</li>
+        </ul>
+    </div>
+    <div class="header_more">
+        <a href="#">
+            <img src="images/images/header_more.png" class="more" alt="more">
+            <img src="images/images/arrow.png" class="arrow" alt="more">
+        </a>
+    </div>
+</div>
+<div id="nav" class="none">
+    <ul>
+        <li><a href="#news">交大资讯</a></li>
+        <li><a href="#blog">交大生活</a></li>
+        <li><a href="#map">交大地图</a></li>
+        <li><a href="#service">交大服务</a></li>
+        <li><a href="http://www.ecjtu.net/about/">About Us</a></li>
+    </ul>
+</div>
+<div id="news">
+    <div class="container">
+        <div class="row">
+            <div class="heading">
+                <h1><span>资讯</span>
+                    <span class="h1_sub"><img src="images/images/news.png" alt="news"></span>
+                    <a href="" class="more">更多</a>
+                </h1>
+            </div>
+            <div class="news_overflow">
+                <div class="news_wrapper">
+                    <div class="news_content1">
+                        {dede:arclist flag='c' typeid='1,6,2,5,71,40' row='1' titlelen='44' infolen='200' limit='0,1'}
+                        <div class="content">
+                            <div class="info col-lg-5 col-md-6 col-sm-12">
+                                <h2 class="title">[field:shorttitle/]</h2>
+                                <p class="main">[field:infos/].</p>
+                                <a href="[field:arcurl/]" target="_blank" class="learnmore">
+                                    <img src="images/images/learnmore.png" alt="learn more">
+                                </a>
+                            </div>
+                            <div class="pic col-lg-7 col-md-6  col-sm-12">
+                                <img lazy-src="[field:picname function='thumb(@me,500,333)'/]" src="[field:picname function='thumb(@me,590,310)'/]" alt="资讯附图1">
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                        {dede:arclist flag='a' typeid='1,6,2,5,71' row='1' titlelen='22' listtype='image' listtype='image' limit='0,1'}
+                        <div class="content content2">
+                            <div class="pic col-lg-7 col-md-6 col-sm-12">
+                                <img lazy-src="[field:picname/]" src="[field:picname/]" alt="资讯附图1"/>
+                            </div>
+                            <div class="info col-lg-5 col-md-6 col-sm-12">
+                                <h2 class="title">[field:shorttitle/]</h2>
+                                <p class="main">[field:infos/].</p>
+                                <a href="[field:arcurl/]" target="_blank" class="learnmore">
+                                    <img src="images/images/learnmore.png" alt="learn more">
+                                </a>
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                    </div>
+                    <div class="news_content2">
+                        {dede:arclist flag='c' typeid='1,6,2,5,71,40' row='1' titlelen='44' infolen='200' limit='1,1'}
+                        <div class="content">
+                            <div class="info col-lg-5 col-md-6 col-sm-12">
+                                <h2 class="title">[field:shorttitle/]</h2>
+                                <p class="main">[field:infos/].</p>
+                                <a href="[field:arcurl/]" target="_blank" class="learnmore">
+                                    <img src="images/images/learnmore.png" alt="learn more">
+                                </a>
+                            </div>
+                            <div class="pic col-lg-7 col-md-6  col-sm-12">
+                                <img lazy-src="[field:picname function='thumb(@me,500,333)'/]" src="[field:picname function='thumb(@me,590,310)'/]" alt="资讯附图1">
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                        {dede:arclist flag='a' typeid='1,6,2,5,71' row='1' titlelen='22' listtype='image' listtype='image' limit='1,1'}
+                        <div class="content content2">
+                            <div class="pic col-lg-7 col-md-6 col-sm-12">
+                                <img lazy-src="[field:picname/]" src="[field:picname/]" alt="资讯附图1"/>
+                            </div>
+                            <div class="info col-lg-5 col-md-6 col-sm-12">
+                                <h2 class="title">[field:shorttitle/]</h2>
+                                <p class="main">[field:infos/].</p>
+                                <a href="[field:arcurl/]" target="_blank" class="learnmore">
+                                    <img src="images/images/learnmore.png" alt="learn more">
+                                </a>
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                    </div>
+                    <div class="news_content3">
+                        {dede:arclist flag='c' typeid='1,6,2,5,71,40' row='1' titlelen='44' infolen='200' limit='2,1'}
+                        <div class="content">
+                            <div class="info col-lg-5 col-md-6 col-sm-12">
+                                <h2 class="title">[field:shorttitle/]</h2>
+                                <p class="main">[field:infos/].</p>
+                                <a href="[field:arcurl/]" target="_blank" class="learnmore">
+                                    <img src="images/images/learnmore.png" alt="learn more">
+                                </a>
+                            </div>
+                            <div class="pic col-lg-7 col-md-6  col-sm-12">
+                                <img lazy-src="[field:picname function='thumb(@me,500,333)'/]" src="[field:picname function='thumb(@me,590,310)'/]" alt="资讯附图1">
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                        {dede:arclist flag='a' typeid='1,6,2,5,71' row='1' titlelen='22' listtype='image' listtype='image' limit='2,1'}
+                        <div class="content content2">
+                            <div class="pic col-lg-7 col-md-6 col-sm-12">
+                                <img lazy-src="[field:picname/]" src="[field:picname/]" alt="资讯附图1"/>
+                            </div>
+                            <div class="info col-lg-5 col-md-6 col-sm-12">
+                                <h2 class="title">[field:shorttitle/]</h2>
+                                <p class="main">[field:infos/].</p>
+                                <a href="[field:arcurl/]" target="_blank" class="learnmore">
+                                    <img src="images/images/learnmore.png" alt="learn more">
+                                </a>
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                    </div>
+                </div>
+            </div>
+            <ul class="slider">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="blog">
+    <div class="sample blog1">
+        <div class="mask">
+            <div class="wrapper">
+                <h1>花椒帮</h1>
+                <div class="icons">
+                    <span class="icon1"><a href="http://bbs.ecjtu.net/forum-28-1.html"><img src="images/images/category.png" alt=""></a></span>
+                    <span class="icon2"><a href="http://bbs.ecjtu.net/forum-28-1.html"><img src="images/images/camera.png" alt=""></a></span>
+                    <span class="icon3"><a href="http://bbs.ecjtu.net/forum-28-1.html"><img src="images/images/video.png" alt=""></a></span>
+                </div>
+                <p>教务处和各学院要认真组织好学生期末考试和课程设计..</p>
+                <span class="detail"><a href="http://bbs.ecjtu.net/forum-28-1.html">DETAIL</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="sample blog2">
+        <div class="mask">
+            <div class="wrapper">
+                <h1>讲座控</h1>
+                <div class="icons">
+                    <span class="icon1"><a href="http://kmh.ecjtu.jx.cn/"><img src="images/images/category.png" alt=""></a></span>
+                    <span class="icon2"><a href="http://kmh.ecjtu.jx.cn/"><img src="images/images/camera.png" alt=""></a></span>
+                    <span class="icon3"><a href="http://kmh.ecjtu.jx.cn/"><img src="images/images/video.png" alt=""></a></span>
+                </div>
+                <p>教务处和各学院要认真组织好学生期末考试和课程设计..</p>
+                <span class="detail"><a href="http://kmh.ecjtu.jx.cn/">DETAIL</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="sample_little blog3">
+    </div>
+    <div class="sample_little blog4">
+        <a href="#"><img class="more" src="images/images/more.png" alt="more"></a>
+    </div>
+    <div class="sample_little blog5">
+    </div>
+</div>
+<div id="college">
+    <div class="marquee_overflow">
+        <ul class="marquee_wrapper">
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学电气与自动化工程学院是华东交通大学的二级学院，2016年5月学校将原“电气与电子工程学院”更名为“电气与自动化工程学院”。学院前身是机电系，始建于1979年9月，后经历电气工程系、电气与信息工程学院、电气工程学院、电气与电子工程学院几个发展阶段。</p>
+                    <a href="">Read More</a>
+                </div>
+
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>华东交通大学机电与车辆工程学院是华东交通大学的二级学院，2016年5月，学校将原“机电工程学院”更名为“机电与车辆工程学院”。学院始建于1979年。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学土木建筑学院创建于1971年，以土木工程学科为主、以交通土建为特色，学院下设4个系、8个本科专业。其中土木工程、给排水科学与工程专业为国家特色专业，交通工程、建筑环境与能源应用工程、建筑学为江西省特色专业，给排水科学与工程专业通过住建部专业评估，是江西省卓越工程师培养计划试点专业。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学信息工程学院成立于2002年1月，其前身为1979年成立的机电工程系。截至2015年4月，学院现有教职工81人，其中教授13人、副教授24人。有四个本科专业，三个学术型硕士点。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>华东交通大学软件学院于2002年6月经江西省教育厅批准成立，是华东交通大学的二级学院，属江西省首批示范性软件学院之一。学院现有在校学生近3700人。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>华东交通大学体育学院创办于1989年，其前身为华东交通大学基础部体育教研室，历经华东交通大学直属体育专业组、体育系等历史沿革，截至2015年，已有17年办学经历。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学理学院成立于1979年10月，前身为华东交通大学基础课部。2014年1月，基础科学学院更名为理学院，原基础科学学院于2000年4月由基础课部升格而来，同年开始招收应用化学本科专业学生。2005年学院成功申报了五个硕士点,且于2007年4月开始招收硕士研究生。现任院长陈爱喜。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学外国语学院成立于2000年3月，在原外语教学部的基础上逐步发展壮大。学院现有翻译、国际贸易、国际旅游三个专业方向，并承担了全校各类各层次学生的公共外语教学任务，课程涉及各类专业的硕士生、本科生（含专升本）、专科生、高职、成教、辅修及双学位专业等。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>华东交通大学艺术学院成立于2006年3月，从人文学院分离。现有环境设计、产品设计、数字媒体艺术、音乐学、舞蹈表演5个本科专业。其中“艺文”结合的 音乐学+汉语言文学
+                        双专业复合型人才培养模式创新实验区成功入选江西省省级人才培养模式创新实验区，2010年音乐学+汉语言文学专业成为省级特色专业。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        2004年5月，华东交通大学与南京军区签约培养国防生，2006年3月8日，正式成立国防生学院。根据《国务院、中央军委关于建立依托普通高等教育培养军队干部制度的决定》精神，按照国家教育部、总政治部下达的招生计划，华东交通大学从2005年开始招收南京军区国防生，首批学生200名。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学经济管理学院（原经济管理系）始建于1983年，学院现有学科涵盖经济学和管理学两大门类，下设经济、管理、会计、统计4个系。现有1个博士点，一级学科硕士点5个，专业硕士点3个。学院现有教职工126人，其中，教授14人（另有兼职教授6人），副教授44人。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学人文社会科学学院的前身是创建于1979年10月的马列主义教研室。1988年9月在马列主义教研室基础上，并入了德育教研室、大学语文教研室，成立了社会科学部。2000年05月社会科学部撤消，升格为人文社会科学学院，同年9月开始招收法学专业学生。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学马克思主义学院2011年4月成立，该学院负责组织、管理全校思想政治理论课教学工作，承担马克思主义理论学科点建设和研究生培养任务，开展马克思主义理论的科学研究以及马克思主义理论教学科研师资队伍建设。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>华东交通大学国际学院是以中外合作办学和外国留学生教育为主要任务的教学单位。学院承担着本科教学改革试验班的教学任务，同时还承担着学校留学生教学安排和管理工作。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>华东交通大学交通运输与物流学院是华东交通大学下属的二级学院，原名为华东交通大学轨道交通学院，学院成立于2009年，2016年5月，轨道交通学院更名为交通运输与物流学院。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>华东交通大学材料科学与工程学院是华东交通大学下属的二级学院，2016年5月，华东交通大学通过整合理、机电两个学院和生物材料研究所学科专业资源，新成立“材料科学与工程学院”。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+            <li>
+                <div class="li_wrapper">
+                    <img class="pic" src="images/images/dianqi.png"></a>
+                    <p>
+                        华东交通大学继续教育与职业技术培训学院创办于1981年，学院前身为华东交通大学干部培训部、成人教育科、成人教育学院、继续教育学院，2015年12月与职业技术培训中心合并成立，是学校管理和实施成人高等教育、职业技术培训、校企合作办学、高等教育自学考试的二级学院。学院地处华东交通大学北校区内。</p>
+                    <a href="">Read More</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="map">
+    <div class="wrapper blur"></div>
+    <div class="content">
+        <h1>你想去哪儿？</h1>
+        <a href="map.html" target="_blank">Read More</a>
+    </div>
+</div>
+<div id="wechat">
+    <div class="wrapper">
+        <img src="images/images/iphone.png" class="iphone" alt="">
+        <div class="content">
+            <h1>关注日新 公众号</h1>
+            <h1>有更多详细资讯</h1>
+        </div>
+        <a href="http://weibo.com/rixinwang" target="_blank" class="readmore">Read More</a>
+    </div>
+</div>
+<div id="service">
+    <div class="container">
+        <div class="row">
+            <h1>服务<span class="h1_sub"><img src="images/images/service.png" alt="service"></span></h1>
+            <div class="PE col-md-2 col-md-offset-1 col-sm-5 col-sm-offset-2 col-xs-12">
+                <a href="">
+                    <span class="pic1"></span>
+                    <span class="pic2"></span>
+                </a>
+            </div>
+            <div class="lecture col-md-2 col-sm-5 col-xs-12">
+                <a href="">
+                    <span class="pic1"></span>
+                    <span class="pic2"></span>
+                </a>
+            </div>
+            <div class="exam col-md-2 col-sm-5 col-xs-12">
+                <a href="">
+                    <span class="pic1"></span>
+                    <span class="pic2"></span>
+                </a>
+            </div>
+            <div class="evaluate col-md-2 col-sm-5 col-xs-12">
+                <a href="">
+                    <span class="pic1"></span>
+                    <span class="pic2"></span>
+                </a>
+            </div>
+        </div>
+        <a href="" class="more">更多</a>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="links col-lg-5 col-sm-12">
+                <label>友情链接</label>
+                <ul class="content">
+                    <li><a href="http://www.ecjtu.jx.cn/" target="_blank">华东交通大学</a></li>
+                    <li><a href="http://www.univs.cn/" target="_blank">中国大学生在线</a></li>
+                    <li><a href="http://www.cyol.net/" target="_blank">中青在线</a></li>
+                    <li><a href="http://www.chinanews.com/" target="_blank" class="pr-0">中新网</a></li>
+                    <li><a href="http://special.univs.cn/service/ecjtu/index.shtml" target="_blank">交大黄页</a></li>
+                    <li><a href="http://www.jxnews.com.cn/" target="_blank">中国江西网</a></li>
+                    <li><a href="http://jxgxw.jxnews.com.cn/" target="_blank">江西高校网</a></li>
+                    <li><a href="http://www.jxedu.gov.cn/" target="_blank" class="pr-0">江西省教育厅</a></li>
+                    <li><a href="http://www.ncuhome.cn/" target="_blank">昌大家园网</a></li>
+                </ul>
+            </div>
+            <div class="links col-lg-5 col-lg-offset-2 col-sm-12">
+                <label>关于我们</label>
+                <ul class="content">
+                    <li><a href="http://www.ecjtu.net/about/" target="_blank">关于我们</a></li>
+                    <li><a href="http://hr.ecjtu.net/" target="_blank">加入我们</a></li>
+                    <li><a href="http://bbs.ecjtu.net/forum-25-1.html" target="_blank">意见反馈</a></li>
+                    <li><a href="http://123.ecjtu.net/" target="_blank">网站地图</a></li>
+                </ul>
+            </div>
+            <div class="copyright col-xs-12">
+                <p>华东交通大学党委宣传部 [ 版权所有 交大日新 ] 赣ICP备05003322号 日新工作室 维护 联系：214@ecjtu.net</p>
+                <p>CopyRight 2001-2014 [ecjtu.net]. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/js/jquery-1.9.1_2.js"></script>
+<script type="text/javascript" src="js/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/js/index.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $(".marquee_wrapper").flexisel({
+            visibleItems: 3,
+            animationSpeed: 1000,
+            autoPlay: true,
+            autoPlaySpeed: 3000,
+            pauseOnHover: true,
+            enableResponsiveBreakpoints: true,
+            responsiveBreakpoints: {
+                portrait: {
+                    changePoint: 480,
+                    visibleItems: 1
+                },
+                landscape: {
+                    changePoint: 768,
+                    visibleItems: 1
+                },
+                tablet: {
+                    changePoint: 992,
+                    visibleItems: 2
+                }
+            }
+        });
+    });
+</script>
+<script type="text/javascript" src="js/js/jquery.flexisel.js"></script>
+</body>
+</html>
