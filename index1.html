@@ -9,8 +9,7 @@
     <meta name="keywords" content="{dede:global.cfg_keywords/}"/>
     <meta name="baidu-tc-verification" content="ee1e74f7f23e053355570e1e5ebd24b7"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.jqzoom.css">
+    <link rel="stylesheet" href="css/style.css">   
 </head>
 <body>
 <!-- <img class="video" src="images/index.jpg" alt="">
@@ -418,7 +417,7 @@
             </li>
             <li>
                 <div class="li_wrapper">
-                    <img class="pic" src="images/dianqi.png"></a>
+                    <img class="pic"<!-- <!--  src --> -->="images/dianqi.png"></a>
                     <p>华东交通大学国际学院是以中外合作办学和外国留学生教育为主要任务的教学单位。学院承担着本科教学改革试验班的教学任务，同时还承担着学校留学生教学安排和管理工作。</p>
                     <a href="">Read More</a>
                 </div>
@@ -452,15 +451,15 @@
     <div class="wrapper blur"></div>
     <div class="content">
         <h1>你想去哪儿？</h1>
-        <a href="" class="mapGo" target="_blank">Read More</a>
+        <a href="" class="mapGo">Read More</a>
     </div>
 </div>
-<div id="map2" class="none">
-    <a href="" class="mapClose" target="_blank">关闭</a>
-    <a href="images/map2.png" class="MYCLASS" title="MYTITLE">  
-        <img src="images/map2.jpg" title="IMAGE TITLE">  
-    </a> 
-    
+<div id="map2">
+    <a href="" class="map_close">关闭</a>
+    <!-- <a class="zoom" href="images/map2.jpg"> -->
+        <img class="old_img" src="images/map2.jpg" />
+    <!-- </a> -->
+    <img src="images/map_logo.png" class="map_logo" alt="">
 </div>
 <div id="wechat">
     <div class="wrapper">
@@ -538,34 +537,15 @@
     </div>
 </div>
 <script type="text/javascript" src="js/jquery-1.9.1_2.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.zoomy0.5.min.js"></script>
+<script type="text/javascript">
+    //This is it
+    $(function(){    
+        $('.zoom').zoomy();
+    });
+</script> -->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-<script>
-    $(document).ready(function(){
-/*
-map
- */
-    /* simple call */
-    jQuery('.MYCLASS').jqzoom();
-  
 
-    /* more complex call*/
-    var options = {  
-      zoomType: 'standard',  
-      lens:true,  
-      preloadImages: true,  
-      alwaysOn:false,  
-      zoomWidth: 300,  
-      zoomHeight: 250,  
-      xOffset:90,  
-      yOffset:30,  
-      position:'left'  
-      //...MORE OPTIONS  
-   };
-
-   $('.MYCLASS').jqzoom(options); 
-});
-</script>
 </body>
 </html>

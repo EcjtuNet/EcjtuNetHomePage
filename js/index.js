@@ -25,11 +25,8 @@ $(window).load(function () {
         }
     });
 });
-$(document).ready(function(){
-/*
-map
- */
-
+$(document).ready(function(){	
+	
 /*
 news slider start
  */
@@ -152,14 +149,25 @@ map start
  */
     (function map(){
     	var map = $("#map"),
-    		wrapper = $("#map .wrapper");
+    		map2 = $("#map2"),
+    		wrapper = $("#map .wrapper"),
+    		btn_close = $(".map_close"),
+    		btn_open = $(".mapGo");
     	map.bind('mouseover', function() {
     		$(wrapper).removeClass('blur');
     	}).bind("mouseout",function(){
 			$(wrapper).addClass('blur');
     	});
-
+    	btn_close.bind("click",function(event){
+    		event.preventDefault();
+    		$(map2).slideUp(600);
+    	});
+    	btn_open.bind("click",function(event){
+    		event.preventDefault();
+    		$(map2).slideDown(600);
+    	});
     }())
+
 /*
 map end
  */
