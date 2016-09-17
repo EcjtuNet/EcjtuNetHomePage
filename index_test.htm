@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gbk">
+<title>{dede:global.cfg_webname/}</title>
+<meta content="all" name="robots" />
+<meta name="author" content="Ecjtu.net" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />    
+<meta name="baidu-tc-verification" content="ee1e74f7f23e053355570e1e5ebd24b7" />
+<link rel="stylesheet" type="text/css" href="css/style.min.css">
+<!--[if IE 8]><style type="text/css">#submit{margin-bottom:-24px;}</style><![endif]-->
+</head>
+<body>
+<div id="header" class="bgc222222">
+	<div id="header-wrap">
+		<div id="nav" class="fl">
+			<div class="nav-wrap">
+				<ul class="clearfix">
+					<li><a href="http://news.ecjtu.net/" target="_blank">新闻网</a></li>
+					<li><a href="http://bbs.ecjtu.net/" target="_blank">论坛</a></li>
+					<li><a href="http://pic.ecjtu.net/" target="_blank">图说</a></li>
+					<li><a href="http://www.ecjtu.jx.cn/" target="_blank">交大主页</a></li>
+					<li><a href="http://bbs.ecjtu.net/forum-28-1.html" target="_blank">二手市场</a></li>
+					<li><a href="http://post.ecjtu.net" target="_blank">邮包</a></li>
+					<li><a href="http://swzl.ecjtu.net/" target="_blank">寻物</a></li>
+					<li><a href="http://u.ecjtu.net/" target="_blank" >云U盘</a></li>
+					<li><a href="http://www.ecjtu.net/html/dangjian/" target="_blank">党建</a></li>
+					<li><a href="http://www.iqingmei.com/ecjtu" target="_blank" >APP</a></li>
+					<li class="sub-menu">
+						<a href="#" target="_blank">>></a>
+						<ul>
+							<li><a href="http://123.ecjtu.net/" target="_blank">导航</a></li>
+							<li><a href="http://lib.ecjtu.jx.cn/" target="_blank">图书馆</a></li>
+							<li><a href="http://bbs.ecjtu.net/forum-106-1.html" target="_blank">资源</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="logo" class="fl">
+			<h1><a href="http://www.ecjtu.net" class="logo-bd mod-img">日新网</a></h1>
+		</div>
+		<div id="search" class="fl">
+			<form methor="GET" action="http://www.baidu.com/baidu">
+				<div class="input-box">
+					<input type="text" name="word" class="search-input">
+					<input type="hidden" name="si" id="msitesearch" value="www.ecjtu.net">
+					<input type="hidden" name="ie" value="gbk">
+					<input type="hidden" name="ct" value="2097152">	
+					<input type="submit" class="search-submit" value="">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="banner">
+	<div class="banner-top">
+		<div class="banner-top-wrap"></div>
+	</div>
+	<div class="banner-bottom"></div>
+</div>
+<div id="main">
+	<!-- 图片轮转 -->
+	<div id="slide" class="fl">
+		<div id="J_tab_3" class="t-slide-2">
+		  	<ul class="tab-nav clearfix fs14">
+		    	<li class="selected"><a href="#">1</a></li>
+		    	<li><a href="">2</a></li>
+		    	<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+		  	</ul>
+		  	<div class="tab-content">
+				{dede:arclist typeid='0' flag='f' row='5' titlelen='40' listtype='image'}
+				<div class="tab-pannel">
+					<a href="[field:arcurl/]" target="_blank"><img lazy-src="[field:picname function='thumb(@me,590,310)'/]" src="images/blank.gif" /></a>
+					<span class="news-title">[field:shorttitle/]</span>
+				</div>
+				{/dede:arclist}
+		  	</div>
+		</div>
+	</div>
+	<div id="hot" class="fl ta-l">
+		<div class="hot-news">
+			<ul>
+				{dede:arclist typeid='*' flag='d' row='1' limit='0,1'}
+				<li class="bgc222222"><a href="[field:arcurl/]" target="_blank" class="cw">[field:shorttitle/]</a></li>
+				{/dede:arclist}
+				{dede:arclist typeid='*' flag='d' row='1' limit='1,1'}
+				<li class="bgc218ead"><a href="[field:arcurl/]" target="_blank" class="cw">[field:shorttitle/]</a></li>
+				{/dede:arclist}
+				{dede:arclist typeid='*' flag='d' row='1' limit='2,1'}
+				<li class="bgc222222"><a href="[field:arcurl/]" target="_blank" class="cw">[field:shorttitle/]</a></li>
+				{/dede:arclist}
+			</ul>
+		</div>
+		<div class="hot-product clearfix">
+			<div class="product-left fl">
+				<a href="http://www.ecjtu.net/plus/view.php?aid=27823" class="guide fl mod-img" target="_blank">手机客户端</a>
+				<a href="http://post.ecjtu.net" class="ems fl mod-img"  target="_blank">邮包</a>
+				<a href="http://123.ecjtu.net" class="blog fl mod-img"  target="_blank">导航</a>
+			</div>
+			<div class="product-center fl">
+				<a href="javascript:;" class="score fl mod-img" target="_blank">成绩</a>
+				<a href="http://swzl.ecjtu.net/" class="find fl mod-img"  target="_blank">寻物</a>
+				<a href="javascript:;" class="time fl mod-img"  target="_blank">查课表</a>
+			</div>
+			<div class="product-right fl">
+				<a href="http://weibo.com/rixinwang" class="cloud mod-img" target="_blank">日新微博</a>
+			</div>
+			<div id="input">
+				<div id="input_close"></div>
+				<div id="input_header">查成绩</div>
+				<input type="text" id="studentId" value="请输入你的学号" onfocus="if (value =='请输入你的学号'){value =''}" onblur="if (value ==''){value='请输入你的学号'}" />
+				<span id="submit"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="news" class="clearfix">
+	<div class="news-hd">
+		<h2  class="mod-img">资讯</h2>
+		<div class="line">
+			<div class="left bgc218ead"></div>
+			<div class="right bgccecece"></div>
+		</div>
+	</div>
+	<div class="school-notice ta-l fl">
+		<div class="mod-hd clearfix">
+			<i class="pre bgc218ead"></i>
+			<h3><a href="http://www.ecjtu.net/html/news/rixingonggao/" target="_blank">校园通告</a></h3>
+		</div>
+		<div class="news-list">
+			<ul>
+			{dede:arclist typeid='26' row='9' titlelen='36'}
+				<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+			{/dede:arclist}
+			</ul>
+		</div>
+		<div class="subject">
+			<a href="http://www.ecjtu.net/zhuanti/html/zhuanti20140113/gyaq/" target="_blank"><img src="/upimg/allimg/140303/1_1215408131.png"  width="269" height="90"></a>
+		</div>
+	</div>
+	<div class="school-news ta-l fl">
+		<h3 class="hot-hd">
+		{dede:arclist typeid='0' flag='h' row='1'}
+			<a href="[field:arcurl/]" target="_blank" class="cff7800">[field:shorttitle/]</a>
+		{/dede:arclist}
+		</h3>
+		<div class="new-list-left fl">
+			<div class="news-list pl15">
+				<ul>
+				{dede:arclist flag='c' typeid='1,6,2,5,71,40' row='6' titlelen='44'}
+					<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+				{/dede:arclist}
+				</ul>
+			</div>
+			<div class="mod-hd clearfix pl15 pt9">
+				<i class="pre bgc218ead"></i>
+				<h3><a href="" target="_blank">热点速递</a></h3>
+			</div>
+			<div class="news-list pl15">
+				<ul>
+				{dede:arclist flag='a' typeid='1,6,2,5,71' row='5' titlelen='44'}
+					<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+				{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+		<div class="news-list-right fl">
+			<div class="news-list list-none">
+				<ul>
+				{dede:arclist typeid='76' row='6' titlelen='34'}
+					<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+				{/dede:arclist}
+				</ul>
+			</div>
+			<div class="mod-hd clearfix pl15 pt9">
+				<i class="pre bgc218ead"></i>
+				<h3><a href="http://bbs.ecjtu.net/" target="_blank">我在交大</a></h3>
+			</div>
+			<div class="news-list list-none">
+				<ul>
+				{dede:arclist typeid='78' row='5' titlelen='34'}
+					<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+				{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="life" class="clearfix">
+	<div class="news-hd">
+		<h2 class="mod-img">生活</h2>
+		<div class="line">
+			<div class="left bgcff7800"></div>
+			<div class="right bgccecece"></div>
+		</div>
+	</div>
+	<div class="life-left ta-l fl">
+		<div class="ecjtu fl">
+			<div class="mod-hd clearfix">
+				<i class="pre bgcff7800"></i>
+				<h3><a href="http://bbs.ecjtu.net/forum-28-1.html" target="_blank" class="cff7800">花椒帮</a></h3>
+			</div>
+			<div class="mod-bd pt15">
+				<div class="mod-bd-l  fl">
+					{dede:arclist typeid='95' row='1' titlelen='28' flag='p' listtype='image'}
+					<a href="[field:arcurl/]" target="_blank"><img lazy-src="[field:picname/]" src="images/blank.gif" alt="[field:shorttitle/]" width="137" height="109"></a>
+					{/dede:arclist}
+				</div>
+				<div class="mod-bd-r fl">
+					<div class="news-list list-none">
+						<ul>
+						{dede:arclist typeid='95' row='4' titlelen='28' noflag='p'}
+							<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+						{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="mod-bd pt15">
+				<div class="mod-bd-l fl">
+					{dede:arclist typeid='96' row='1' titlelen='28' flag='p' listtype='image'}
+					<a href="[field:arcurl/]" target="_blank"><img lazy-src="[field:picname/]" src="images/blank.gif" alt="[field:shorttitle/]" width="137" height="109"></a>
+					{/dede:arclist}
+				</div>
+				<div class="mod-bd-r fl">
+					<div class="news-list list-none">
+						<ul>
+						{dede:arclist typeid='96' row='4' titlelen='28' noflag='p'}
+							<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+						{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lecture fl">
+			<div class="mod-hd clearfix">
+				<i class="pre bgcff7800"></i>
+				<h3><a href="http://kmh.ecjtu.jx.cn/" target="_blank" class="cff7800">讲座控</a></h3>
+			</div>
+
+			{dede:arclist typeid='97' row='2' titlelen='22' infolen='200' listtype='image' listtype='image'}
+			<div class="mod-bd pt15">
+				<div class="mod-bd-l fl">
+					<a href="[field:arcurl/]" target="_blank"><img lazy-src="[field:picname/]" src="images/blank.gif" alt="[field:shorttitle/]" width="137" height="109"></a>
+				</div>
+				<div class="mod-bd-r fl">
+					<div class="news-list list-none">
+						<p><a href="[field:arcurl/]" target="_blank" class="fs14">[field:shorttitle/]</a></p>
+						<p class="lecture-content">[field:infos/]</p>
+					</div>
+				</div>
+			</div>
+			{/dede:arclist}
+
+		</div>
+		<div id="JSlide">
+			<div class="scrollable-panel">
+			{dede:arclist typeid='27' row='6' listtype='image'}
+				<div class="scrollable-content">
+					<a href="[field:arcurl/]" target="_blank"><img lazy-src="[field:picname/]" src="images/blank.gif" /></a>
+				</div>
+			{/dede:arclist}
+			</div>
+		</div>
+	</div>
+	<div class="life-right ta-l fl">
+		<div class="service">
+			<div class="mod-hd clearfix">
+				<i class="pre bgcff7800"></i>
+				<h3 class="cff7800">服务派</h3>
+			</div>
+			<div class="service-list mod-list">
+				<p>
+					<a href="http://bbs.ecjtu.net/forum-106-1.html" target="_blank" class="cff7800">考试试卷</a>
+					<a href="http://tyxy.ecjtu.jx.cn:81/student" target="_blank">体育选课</a>
+					<a href="http://jwc.ecjtu.jx.cn:8080/jwcmis/classroom/freeclassroom.jsp" target="_blank">自习室查询</a>
+					<a href="http://jwc.ecjtu.jx.cn:8080/jwcmis/index.htm" target="_blank" class="cff7800">选修课</a>
+				</p>
+				<p>
+					<a href="http://jwc.ecjtu.jx.cn:8080/jwcmis/examarrange.jsp" target="_blank" class="cff7800">考试安排</a>
+					<a href="http://www.ecjtu.jx.cn/picture/article/25/06/b2/a317776846ada2f49193dbd0e29a/02667eeb-0323-49c3-98b6-54a51eb3c2c1.xls" target="_blank">校历</a>
+					<a href="http://jwc.ecjtu.jx.cn:8080/jwcmis/dektxf.jsp" target="_blank">第二课堂学分</a>
+					<a href="http://yywz.ecjtu.jx.cn/" target="_blank">语言文字</a>
+				</p>
+				<p>
+					<a href="http://lib.ecjtu.jx.cn/" target="_blank">图书查询</a>
+					<a href="http://jwc.ecjtu.jx.cn:8080/jwcmis/stuquery.jsp" target="_blank">班级名单</a>
+					<a href="http://jwc.ecjtu.jx.cn:8080/jwcmis/assess/" target="_blank" class="cff7800">网上评教</a>
+					<a href="http://blog.jxcn.cn/u/wanglixia/" target="_blank">博约人生</a>
+				</p>
+				<p>
+					<a href="http://bbs.ecjtu.net/thread-514004-1-1.html" target="_blank">日新卡商</a>
+					<a href="http://lib.ecjtu.jx.cn/dzfw/tsjg.htm" target="_blank">图书荐购</a>
+					<a href="http://bbs.ecjtu.net/thread-520621-1-1.html" 	target="_blank" class="cff7800">交大校徽</a>
+					<a href="http://bbs.ecjtu.net/thread-522358-1-1.html" target="_blank" class="cff7800">交大字体</a>
+				</p>
+				<p>
+					<a href="http://xw.ecjtu.jx.cn/s/25/t/3/p/1/c/96/list.htm" target="_blank" class="cff7800">校内资料</a>
+					<a href="http://bbs.ecjtu.net/thread-492078-1-1.html" target="_blank">课后资料</a>
+					<a href="http://zty.ecjtu.net" target="_blank">詹天佑班</a>
+					<a href="http://oa.ecjtu.jx.cn/" target="_blank">公文系统</a>
+				</p>
+			</div>
+		</div>
+		<div class="life-hot">
+			<div class="mod-hd clearfix">
+				<i class="pre bgcff7800"></i>
+				<h3 class="cff7800">生活热点</h3>
+			</div>
+			<div class="life-box mt-15"><a href="http://www.iqingmei.com/ecjtu" target="_blank"><img lazy-src="/upimg/allimg/131129/1-13112Z546141A.jpg" src="images/blank.gif" /></a></div>
+			<div class="life-box mt-35"><a href="http://bbs.ecjtu.net/forum-28-1.html" target="_blank"><img lazy-src="/upimg/allimg/140308/1_1521016041.png" src="images/blank.gif" /></a></div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+		<div class="footer-wrap clearfix">
+			<div id="friend-link" class="fl  ta-l">
+				<h3 class="footer-hd bottom-line">友情链接</h3>
+				<div class="mod-list">
+					<p>
+						<a href="http://www.ecjtu.jx.cn/" target="_blank">华东交通大学</a>
+						<a href="http://www.univs.cn/" target="_blank">中国大学生在线</a>
+						<a href="http://www.cyol.net/" target="_blank">中青在线</a>
+						<a href="http://www.chinanews.com/" target="_blank" class="pr-0">中新网</a>
+					</p>
+					<p>
+						<a href="http://special.univs.cn/service/ecjtu/index.shtml" target="_blank">交大黄页</a>
+						<a href="http://www.jxnews.com.cn/" target="_blank">中国江西网</a>
+						<a href="http://jxgxw.jxnews.com.cn/" target="_blank">江西高校网</a>
+						<a href="http://www.jxedu.gov.cn/" target="_blank" class="pr-0">江西省教育厅</a>
+					</p>
+					<p>
+						<a href="http://www.ncuhome.cn/" target="_blank">昌大家园网</a>
+					</p>
+				</div>
+			</div>
+			<div id="about-us" class="fl ta-l">
+				<h3 class="footer-hd bottom-line">关于我们</h3>
+				<div class="mod-list">
+					<p>
+						<a href="http://www.ecjtu.net/about/" target="_blank">关于我们</a>
+						<a href="http://hr.ecjtu.net/" target="_blank">加入我们</a>
+						<a href="http://123.ecjtu.net/" target="_blank">网站地图</a>
+						<a href="http://bbs.ecjtu.net/forum-25-1.html" target="_blank">意见反馈</a>
+					</p>
+				</div>
+			</div>
+			<div id="concat-us" class="fl  ta-l">
+				<h3 class="footer-hd">联系我们</h3>
+				<div class="service-list">
+					<p><a href="http://weibo.com/rixinwang" target="_blank" class="weibo">新浪微博</a></p>
+					<p><a href="http://t.qq.com/ecjturx" target="_blank" class="tx-weibo">腾讯微博</a></p>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			<p>{dede:global.cfg_beian/}</p>
+			<p class="tongji"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fac0fbfee69bd28c0959f9fd71a9b9555' type='text/javascript'%3E%3C/script%3E"));
+</script> {dede:global.cfg_powerby/}</p>
+		</div>
+</div>
+<div id="rocket-wechat">
+	<div id="return-top">
+		<a href="javascript:;" class="mod-img">回到顶部</a>
+	</div>
+	<div id="wechat">
+		<a href="javascript:;" class="mod-img">微信</a>
+		<div id="qr">
+			<img src="images/body/xiaoxin.jpg" alt="小新">
+		</div>
+	</div>
+</div>
+
+<!--查成绩-->
+
+<div id="cj">
+	<div id="cj_div">
+		<span id='cj_close'></span>
+	</div>
+	<div id="table_box">
+		<ul id="table">
+		</ul>
+	</div>
+	<div id="select">
+		学号<input type="text" id="select_id" value="请输入你的学号" onfocus="if (value =='请输入你的学号'){value =''}" onblur="if (value ==''){value='请输入你的学号'}" />
+			<input type="button" id="select_btn" value="查询"/>
+		<h5>选择学期</h5>
+		<ul>
+			<li class='select_term'>2013.1</li>
+			<li>2012.2</li>
+			<li>2012.1</li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://g.tbcdn.cn/kissy/k/1.4.0/seed-min.js" data-config="{combine:true}"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
