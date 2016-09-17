@@ -202,15 +202,16 @@ body {
   height: 756px;
   background-size: cover;
 }
-.map2 {
+/*.map2 {
   width: 100%;
   height: 100%;
-}
+}*/
+
 #header {
   width: 100%;
   height: 100%;
   float: left;
-  background-image: url(../images/images/index.jpg);
+  background-image: url(../images/index.jpg);
   background-size: cover;
   position: relative;
 }
@@ -702,10 +703,10 @@ body {
   text-align: center;
 }
 #blog .blog1 {
-  background-image: url(../images/images/blog1.jpg);
+  background-image: url(../images/blog1.jpg);
 }
 #blog .blog2 {
-  background-image: url(../images/images/blog2.jpg);
+  background-image: url(../images/blog2.jpg);
 }
 #blog .sample_little {
   width: 33.3%;
@@ -713,10 +714,10 @@ body {
   height: 400px;
 }
 #blog .blog3 {
-  background-image: url(../images/images/blog3.jpg);
+  background-image: url(../images/blog3.jpg);
 }
 #blog .blog4 {
-  background-image: url(../images/images/blog4.jpg);
+  background-image: url(../images/blog4.jpg);
   position: relative;
 }
 #blog .blog4 .more {
@@ -735,14 +736,14 @@ body {
   transform: scale(1.2);
 }
 #blog .blog5 {
-  background-image: url(../images/images/blog5.jpg);
+  background-image: url(../images/blog5.jpg);
 }
 #college {
   width: 100%;
   height: 883px;
   overflow: hidden;
   float: left;
-  background-image: url(../images/images/college.jpg);
+  background-image: url(../images/college.jpg);
 }
 #college .marquee_overflow {
   margin-top: 87px;
@@ -850,21 +851,22 @@ body {
 /*---- Nav ---*/
 .nbs-flexisel-nav-left,
 .nbs-flexisel-nav-right {
-  width: 20px;
-  height: 34px;
+  width: 30px;
+  /*height: 34px;*/
+  height: 60%;
   position: absolute;
   cursor: pointer;
   z-index: 100;
 }
 .nbs-flexisel-nav-left {
   left: 0%;
-  top: 15% !important;
-  background: url(../images/images/arrow2.png) no-repeat 0 0;
+  top: 30% !important;
+  background: url(../images/arrow2.png) no-repeat 0 0;
 }
 .nbs-flexisel-nav-right {
   right: 0%;
-  top: 15% !important;
-  background: url(../images/images/arrow2.png) no-repeat 100% 0;
+  top: 30% !important;
+  background: url(../images/arrow2.png) no-repeat 100% 0;
 }
 #map {
   float: left;
@@ -876,7 +878,7 @@ body {
   width: 100%;
   height: 100%;
   float: left;
-  background-image: url(../images/images/map.jpg);
+  background-image: url(../images/map.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1050,24 +1052,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/PE1.png);
+  background-image: url(../images/PE1.png);
 }
 #service .PE .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/PE2.png);
+  background-image: url(../images/PE2.png);
 }
 #service .PE a:hover .pic1 {
-  background-image: url(../images/images/PE1_after.png);
+  background-image: url(../images/PE1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .PE a:hover .pic2 {
-  background-image: url(../images/images/PE2_after.png);
+  background-image: url(../images/PE2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
@@ -1078,24 +1080,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/lecture1.png);
+  background-image: url(../images/lecture1.png);
 }
 #service .lecture .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/lecture2.png);
+  background-image: url(../images/lecture2.png);
 }
 #service .lecture a:hover .pic1 {
-  background-image: url(../images/images/lecture1_after.png);
+  background-image: url(../images/lecture1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .lecture a:hover .pic2 {
-  background-image: url(../images/images/lecture2_after.png);
+  background-image: url(../images/lecture2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
@@ -1106,24 +1108,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/exam1.png);
+  background-image: url(../images/exam1.png);
 }
 #service .exam .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/exam2.png);
+  background-image: url(../images/exam2.png);
 }
 #service .exam a:hover .pic1 {
-  background-image: url(../images/images/exam1_after.png);
+  background-image: url(../images/exam1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .exam a:hover .pic2 {
-  background-image: url(../images/images/exam2_after.png);
+  background-image: url(../images/exam2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
@@ -1134,24 +1136,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/evaluate1.png);
+  background-image: url(../images/evaluate1.png);
 }
 #service .evaluate .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/images/evaluate2.png);
+  background-image: url(../images/evaluate2.png);
 }
 #service .evaluate a:hover .pic1 {
-  background-image: url(../images/images/evaluate1_after.png);
+  background-image: url(../images/evaluate1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .evaluate a:hover .pic2 {
-  background-image: url(../images/images/evaluate2_after.png);
+  background-image: url(../images/evaluate2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);

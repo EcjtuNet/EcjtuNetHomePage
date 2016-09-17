@@ -118,9 +118,8 @@ body{
   height:756px;
   background-size: cover;
 }
-.map2{
-  width:100%;
-  height: 100%;
+.container {
+  width: 1423px;
 }
 #header{
 	width:100%;
@@ -411,9 +410,6 @@ body{
 		}
 	}
 }
-.container {
-  width: 1423px;
-}
 #news{
   width:100%;
   float:left;
@@ -563,13 +559,14 @@ body{
     }
   }
 }
-#blog{
+#notice{
   float:left;
   width:100%;
+  position:relative;
   .sample{
-    float:left;
-    width:50%;
     height:775px;
+    padding-left: 0;
+    padding-right: 0;
     background-size: cover;
     &:hover .mask{
       animation:showMask;
@@ -589,73 +586,56 @@ body{
     opacity:0;         
     width:100%;
     height: 100%;
-    background-color: @a_hover;
+    background-color: rgba(41, 36, 36, 0.82);
     color:#F6F6F6;
-    .wrapper{
-      width: 430px;
-      padding-top: 122px;
-      margin:0 auto;
-    }
+  }
+  .wrapper{
+    width: 76.56%;
+    padding-top: 66px;
+    margin:0 auto;
+    text-align: left;
+    // position:relative;
     h1{
-      font-size: 5.8rem;//93px
-      text-align: center;
-    }
-    .icons{
-      width:376px;
-      height:74px;
-      margin:82px auto 75px;
-      span{
-        height:100%;
-      }
-      img{
-        height:100%;
-      }
-      .icon1{
-        float:left;
-      }
-      .icon2{
-        margin-left:72px;
-      }
-      .icon3{
-        float:right;
-      }
-    }
-    p{
-      font-size: 2.125rem;//34px
-      line-height: 4.3rem;//69px
+      font-size: 3.125rem;
       text-align: left;
+      font-weight: bold;
     }
-    .detail{
-      display:block;
-      font-size: 2.5rem;//40px
-      margin-top:55px;
-      text-align: center;
+    ul{
+      margin-top: 110px;
+      list-style: disc;
+      li{
+        font-size: 1.625rem;//26px
+        line-height: 2rem;
+        text-align: left;
+      }
     }
+    a{
+      transition:all .5s ease;
+      color:#fff;
+      &:hover{
+        color:@a_hover;
+      }
+    } 
   }
-  .blog1{
-    background-image: url(../images/blog1.jpg);
+  .notice1{
+    background-image: url(../images/notice1.jpg); 
   }
-  .blog2{
-    background-image: url(../images/blog2.jpg);
+  .notice2{
+    background-image: url(../images/notice2.jpg);
   }
-  .sample_little{
-    width:33.3%;
-    float:left;
-    height:400px;
-  }
-  .blog3{
-    background-image: url(../images/blog3.jpg);
-  }
-  .blog4{
-    background-image: url(../images/blog4.jpg);
-    position:relative;
+  .more_wrapper{
+    width:100%;
+    height:75px;
+    position:absolute;
+    bottom:0;
+    background: -webkit-linear-gradient(top,rgba(0,0,0,.0001),rgba(0,0,0,.25));
     .more{
       position:absolute;
       width:100px;
       height:28px;
       left:50%;
       margin-left: -50px;
-      bottom:12px;
+      bottom:20px;
       transition:all 0.3s ease;
       &:hover{
         -webkit-transform:scale(1.2);
@@ -663,11 +643,87 @@ body{
         -o-transform:scale(1.2);
         transform:scale(1.2);
       }
+    }   
+  }  
+}
+#life{
+  width:100%;
+  float: left;
+  position:relative;
+  background-color: #6199A8;
+  .container{
+    margin:55px auto;
+    h1{
+      font-size: 3.125rem;//50px
+      font-weight: bold;
+      text-align: center;
+      color:#fff;
+      margin-bottom: 90px;
+      span{
+        color:#0F5B70;
+        font-weight: normal;
+        margin-left: 24px;
+      }
     }
-  }
-  .blog5{
-    background-image: url(../images/blog5.jpg);
-  }
+    .life_part{
+      height:300px;
+      margin-bottom: 10px;
+      &:hover{
+        border-radius: 5px;
+        overflow:hidden;
+        transition:all 0.5s ease;
+        box-shadow: 1px 1px 40px 2px #ccc;
+        background-color:#ddd; 
+      }
+      &:hover img{
+        transition:all 0.5s ease;
+        -webkit-transform:scale(0.9);
+        -moz-transform:scale(1.2);
+        -o-transform:scale(1.2);
+        transform:scale(1.2);
+        opacity:0.85;
+      }
+      .img_wrapper{
+        width:100%;
+        //height:193px;
+        overflow:hidden;
+        img{
+          width:100%;
+        }   
+      }
+      .content{
+        padding: 16px 0 26px;
+        height:100px;
+        text-align: center;
+        position:relative;
+        .name{
+          font-size: 1.375rem;//22px
+        }
+        .date{
+          font-size: 1.125rem;//18px
+          position:absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 26px;
+        }
+      } 
+    }
+    .more{
+      position:absolute;
+      width:100px;
+      height:28px;
+      left:50%;
+      margin-left: -50px;
+      bottom:20px;
+      transition:all 0.3s ease;
+      &:hover{
+        -webkit-transform:scale(1.2);
+        -moz-transform:scale(1.2);
+        -o-transform:scale(1.2);
+        transform:scale(1.2);
+      }
+    }  
+  } 
 }
 #college{
   width:100%;
@@ -781,20 +837,21 @@ body{
   }
   /*---- Nav ---*/
   .nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
-    width: 20px;
-    height: 34px;
+    width: 30px;
+    // height: 34px;
+    height:60%;
     position: absolute;
     cursor: pointer;
     z-index: 100;
   }
   .nbs-flexisel-nav-left {
     left:0%;
-    top:15% !important;
+    top:30% !important;
     background: url(../images/arrow2.png) no-repeat 0 0;
   }
   .nbs-flexisel-nav-right {
     right:0%;
-    top:15% !important;
+    top:30% !important;
     background: url(../images/arrow2.png) no-repeat 100% 0;
   }
 #map{
@@ -850,6 +907,21 @@ body{
         background-color: @a_hover_darker;
       }
     }
+  }
+}
+#map2{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(41, 36, 36, 0.82);
+  img{
+    //width:80%;
+    height:100%;
+    // background-image:url(../images/map2.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
 }
 #wechat{
@@ -1193,44 +1265,34 @@ resposive_layout
     margin:100px auto 52px auto;
     }
   } 
-  #blog{
+  #notice{
     .sample{
       height:586px;
     }
-    .sample_little{
-      height: 302px;
-    }
     .mask{
       .wrapper{
-        width: 326px;
-        padding-top: 93px;
+        width: 426px;
+        padding-top: 60px;
       }
+      ul{
+          margin-top: 50px;
+        li{
+        font-size: 1.1rem;//16px
+        line-height: 1.3rem;
+        } 
+      }
+    }
+  }
+  #life{
+    .container{
+      margin-top: 30px;
       h1{
-        font-size: 4.31rem;//69px
-        text-align: center;
+        margin-bottom: 60px;
       }
-      .icons{
-        width:292px;
-        height:57px;
-        margin:64px auto 59px;
-        .icon2{
-          margin-left:56px;
-        }
-      }
-      p{
-        font-size: 1.625rem;//26px
-        line-height: 3.125rem;//50px
-      }
-      .detail{
-        font-size: 2rem;//32px
-        margin-top:45px;
-      }
-    }
-    .blog4 .more{
-      width:76px;
-      height:23px;
-      margin-left: -38px;
-    }
+      .life_part{
+        height:220px;  
+      } 
+    } 
   }
   #college{
     height:672px;
@@ -1422,7 +1484,32 @@ resposive_layout
       margin-top: 20px;
     }
   }
-  
+  #notice{
+    .mask{
+      h1{
+        font-size: 4.125rem;
+        text-align: center;
+      }
+      ul{
+          margin-top: 50px;
+        li{
+        font-size: 1.5rem;//16px
+        line-height: 1.6rem;
+        } 
+      }
+    }
+  }
+  #life{
+    .container{
+      margin-top: 55px;
+      h1{
+        margin-bottom: 90px;
+      }
+      .life_part{
+        height:300px;  
+      } 
+    } 
+  }
   #service{
     .lecture,.evaluate{
       margin-left: 0;
@@ -1454,6 +1541,13 @@ resposive_layout
     li:nth-child(5){
       margin-top: 5%;
     }
+  }
+  #life{
+    .container{
+      .life_part{
+        height:440px;  
+      } 
+    } 
   }
   #college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin:20px 150px;

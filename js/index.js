@@ -1,4 +1,35 @@
+/*
+college slider
+ */
+$(window).load(function () {
+    $(".marquee_wrapper").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+            portrait: {
+                changePoint: 480,
+                visibleItems: 1
+            },
+            landscape: {
+                changePoint: 768,
+                visibleItems: 1
+            },
+            tablet: {
+                changePoint: 992,
+                visibleItems: 2
+            }
+        }
+    });
+});
 $(document).ready(function(){
+/*
+map
+ */
+
 /*
 news slider start
  */
