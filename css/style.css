@@ -197,6 +197,40 @@ body {
   -ms-filter: blur(10px);
   filter: blur(10px);
 }
+#toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 2%;
+  overflow: hidden;
+  z-index: 999;
+  width: 57px;
+  height: 67px;
+  border: none;
+  text-indent: 100%;
+  background-image: url("../images/top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: moreMove;
+  -webkit-animation-name: moreMove;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+#toTop #toTopHover {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  float: right;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
 .video {
   width: 100%;
   height: 756px;
@@ -484,6 +518,9 @@ body {
 }
 #nav ul li a:hover {
   color: #1A83A0;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #nav ul li:nth-child(1) {
@@ -675,7 +712,7 @@ body {
 }
 #notice .wrapper ul li {
   font-size: 1.625rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
   text-align: left;
 }
 #notice .wrapper a {
@@ -735,7 +772,7 @@ body {
   margin-left: 24px;
 }
 #life .container .life_part {
-  height: 300px;
+  height: 320px;
   margin-bottom: 10px;
 }
 #life .container .life_part:hover {
@@ -755,10 +792,12 @@ body {
 }
 #life .container .life_part .img_wrapper {
   width: 100%;
+  height: 220px;
   overflow: hidden;
 }
 #life .container .life_part .img_wrapper img {
   width: 100%;
+  height: 100%;
 }
 #life .container .life_part .content {
   padding: 16px 0 26px;
@@ -982,18 +1021,20 @@ body {
   z-index: 99999;
   top: 0;
   left: 0;
-  background-color: #292424;
+  background-color: rgba(11, 11, 11, 0.73);
 }
 #map2 .map_close {
   display: block;
   position: absolute;
   right: 50px;
   top: 50px;
+  z-index: 9999;
+  color: #fff;
   font-size: 3rem;
   background-color: #000;
 }
 #map2 .map_close:hover {
-  color: #fff;
+  color: #2EA7C9;
 }
 #map2 .map_logo {
   width: 100px;
@@ -1004,9 +1045,10 @@ body {
 }
 #map2 .old_img {
   position: absolute;
-  height: 100%;
+  height: 80%;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1373,16 +1415,16 @@ resposive_layout
   #notice .sample {
     height: 586px;
   }
-  #notice .mask .wrapper {
+  #notice .wrapper {
     width: 426px;
     padding-top: 60px;
   }
-  #notice .mask ul {
+  #notice .wrapper ul {
     margin-top: 50px;
   }
-  #notice .mask ul li {
-    font-size: 1.1rem;
-    line-height: 1.3rem;
+  #notice .wrapper ul li {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
   }
   #life .container {
     margin-top: 30px;
@@ -1391,7 +1433,16 @@ resposive_layout
     margin-bottom: 60px;
   }
   #life .container .life_part {
-    height: 220px;
+    height: 260px;
+  }
+  #life .container .life_part .img_wrapper {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+  }
+  #life .container .life_part .img_wrapper img {
+    width: 100%;
+    height: 100%;
   }
   #college {
     height: 672px;
@@ -1568,16 +1619,19 @@ resposive_layout
   #news .content2 .info {
     margin-top: 20px;
   }
-  #notice .mask h1 {
+  #notice .wrapper {
+    width: 526px;
+  }
+  #notice .wrapper h1 {
     font-size: 4.125rem;
     text-align: center;
   }
-  #notice .mask ul {
+  #notice .wrapper ul {
     margin-top: 50px;
   }
-  #notice .mask ul li {
+  #notice .wrapper ul li {
     font-size: 1.5rem;
-    line-height: 1.6rem;
+    line-height: 2.3rem;
   }
   #life .container {
     margin-top: 55px;
@@ -1587,6 +1641,9 @@ resposive_layout
   }
   #life .container .life_part {
     height: 300px;
+  }
+  #life .container .life_part .img_wrapper {
+    height: 200px;
   }
   #service .lecture,
   #service .evaluate {
@@ -1613,7 +1670,10 @@ resposive_layout
     margin-top: 5%;
   }
   #life .container .life_part {
-    height: 440px;
+    height: 400px;
+  }
+  #life .container .life_part .img_wrapper {
+    height: 300px;
   }
   #college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin: 20px 150px;

@@ -26,7 +26,8 @@ $(window).load(function () {
     });
 });
 $(document).ready(function(){	
-	
+	$().UItoTop({ easingType: 'easeOutQuart' });
+								
 /*
 news slider start
  */
@@ -160,11 +161,11 @@ map start
     	});
     	btn_close.bind("click",function(event){
     		event.preventDefault();
-    		$(map2).slideUp(600);
+    		$(map2).fadeOut(600);
     	});
     	btn_open.bind("click",function(event){
     		event.preventDefault();
-    		$(map2).slideDown(600);
+    		$(map2).fadeIn(600);
     	});
     }())
 
