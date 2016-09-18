@@ -197,21 +197,53 @@ body {
   -ms-filter: blur(10px);
   filter: blur(10px);
 }
+#toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 2%;
+  overflow: hidden;
+  z-index: 999;
+  width: 57px;
+  height: 67px;
+  border: none;
+  text-indent: 100%;
+  background-image: url("../picture/top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: moreMove;
+  -webkit-animation-name: moreMove;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+#toTop #toTopHover {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  float: right;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
 .video {
   width: 100%;
   height: 756px;
   background-size: cover;
 }
-/*.map2 {
-  width: 100%;
-  height: 100%;
-}*/
-
+.container {
+  width: 1423px;
+}
 #header {
   width: 100%;
   height: 100%;
   float: left;
-  background-image: url(../images/index.jpg);
+  background-image: url(../picture/index.jpg);
   background-size: cover;
   position: relative;
 }
@@ -486,6 +518,9 @@ body {
 }
 #nav ul li a:hover {
   color: #1A83A0;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #nav ul li:nth-child(1) {
@@ -493,9 +528,6 @@ body {
 }
 #nav ul li:nth-child(5) {
   margin-top: 5%;
-}
-.container {
-  width: 1423px;
 }
 #news {
   width: 100%;
@@ -633,17 +665,18 @@ body {
 #news .slider .active {
   background-color: #2EA7C9;
 }
-#blog {
+#notice {
   float: left;
   width: 100%;
+  position: relative;
 }
-#blog .sample {
-  float: left;
-  width: 50%;
+#notice .sample {
   height: 775px;
+  padding-left: 0;
+  padding-right: 0;
   background-size: cover;
 }
-#blog .sample:hover .mask {
+#notice .sample:hover .mask {
   animation: showMask;
   -webkit-animation: showMask;
   animation-duration: .5s;
@@ -655,95 +688,154 @@ body {
   box-shadow: 0 0 40px 4px #5B5B5B;
   z-index: 999;
 }
-#blog .mask {
+#notice .mask {
   opacity: 0;
   width: 100%;
   height: 100%;
-  background-color: #2EA7C9;
+  background-color: rgba(41, 36, 36, 0.82);
   color: #F6F6F6;
 }
-#blog .mask .wrapper {
-  width: 430px;
-  padding-top: 122px;
+#notice .wrapper {
+  width: 76.56%;
+  padding-top: 66px;
   margin: 0 auto;
-}
-#blog .mask h1 {
-  font-size: 5.8rem;
-  text-align: center;
-}
-#blog .mask .icons {
-  width: 376px;
-  height: 74px;
-  margin: 82px auto 75px;
-}
-#blog .mask .icons span {
-  height: 100%;
-}
-#blog .mask .icons img {
-  height: 100%;
-}
-#blog .mask .icons .icon1 {
-  float: left;
-}
-#blog .mask .icons .icon2 {
-  margin-left: 72px;
-}
-#blog .mask .icons .icon3 {
-  float: right;
-}
-#blog .mask p {
-  font-size: 2.125rem;
-  line-height: 4.3rem;
   text-align: left;
 }
-#blog .mask .detail {
-  display: block;
-  font-size: 2.5rem;
-  margin-top: 55px;
-  text-align: center;
+#notice .wrapper h1 {
+  font-size: 3.125rem;
+  text-align: left;
+  font-weight: bold;
 }
-#blog .blog1 {
-  background-image: url(../images/blog1.jpg);
+#notice .wrapper ul {
+  margin-top: 110px;
+  list-style: disc;
 }
-#blog .blog2 {
-  background-image: url(../images/blog2.jpg);
+#notice .wrapper ul li {
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+  text-align: left;
 }
-#blog .sample_little {
-  width: 33.3%;
-  float: left;
-  height: 400px;
+#notice .wrapper a {
+  transition: all .5s ease;
+  color: #fff;
 }
-#blog .blog3 {
-  background-image: url(../images/blog3.jpg);
+#notice .wrapper a:hover {
+  color: #2EA7C9;
 }
-#blog .blog4 {
-  background-image: url(../images/blog4.jpg);
-  position: relative;
+#notice .notice1 {
+  background-image: url(../picture/notice1.jpg);
 }
-#blog .blog4 .more {
+#notice .notice2 {
+  background-image: url(../picture/notice2.jpg);
+}
+#notice .more_wrapper {
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  bottom: 0;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.0001), rgba(0, 0, 0, 0.25));
+}
+#notice .more_wrapper .more {
   position: absolute;
   width: 100px;
   height: 28px;
   left: 50%;
   margin-left: -50px;
-  bottom: 12px;
+  bottom: 20px;
   transition: all 0.3s ease;
 }
-#blog .blog4 .more:hover {
+#notice .more_wrapper .more:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
   transform: scale(1.2);
 }
-#blog .blog5 {
-  background-image: url(../images/blog5.jpg);
+#life {
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #6199A8;
+}
+#life .container {
+  margin: 55px auto;
+}
+#life .container h1 {
+  font-size: 3.125rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 90px;
+}
+#life .container h1 span {
+  color: #0F5B70;
+  font-weight: normal;
+  margin-left: 24px;
+}
+#life .container .life_part {
+  height: 320px;
+  margin-bottom: 10px;
+}
+#life .container .life_part:hover {
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: 1px 1px 40px 2px #ccc;
+  background-color: #ddd;
+}
+#life .container .life_part:hover img {
+  transition: all 0.5s ease;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+#life .container .life_part .img_wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+#life .container .life_part .img_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+#life .container .life_part .content {
+  padding: 16px 0 26px;
+  height: 100px;
+  text-align: center;
+  position: relative;
+}
+#life .container .life_part .content .name {
+  font-size: 1.375rem;
+}
+#life .container .life_part .content .date {
+  font-size: 1.125rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 26px;
+}
+#life .container .more {
+  position: absolute;
+  width: 100px;
+  height: 28px;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 20px;
+  transition: all 0.3s ease;
+}
+#life .container .more:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 #college {
   width: 100%;
   height: 883px;
   overflow: hidden;
   float: left;
-  background-image: url(../images/college.jpg);
+  background-image: url(../picture/college.jpg);
 }
 #college .marquee_overflow {
   margin-top: 87px;
@@ -852,7 +944,6 @@ body {
 .nbs-flexisel-nav-left,
 .nbs-flexisel-nav-right {
   width: 30px;
-  /*height: 34px;*/
   height: 60%;
   position: absolute;
   cursor: pointer;
@@ -861,12 +952,12 @@ body {
 .nbs-flexisel-nav-left {
   left: 0%;
   top: 30% !important;
-  background: url(../images/arrow2.png) no-repeat 0 0;
+  background: url(../picture/arrow2.png) no-repeat 0 0;
 }
 .nbs-flexisel-nav-right {
   right: 0%;
   top: 30% !important;
-  background: url(../images/arrow2.png) no-repeat 100% 0;
+  background: url(../picture/arrow2.png) no-repeat 100% 0;
 }
 #map {
   float: left;
@@ -878,7 +969,7 @@ body {
   width: 100%;
   height: 100%;
   float: left;
-  background-image: url(../images/map.jpg);
+  background-image: url(../picture/map.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: all 0.3s ease-in-out;
@@ -922,6 +1013,59 @@ body {
 }
 #map .content a:hover {
   background-color: #1A83A0;
+}
+#map2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  background-color: rgba(11, 11, 11, 0.73);
+}
+#map2 .map_close {
+  display: block;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  z-index: 9999;
+  color: #fff;
+  font-size: 3rem;
+  background-color: #000;
+}
+#map2 .map_close:hover {
+  color: #2EA7C9;
+}
+#map2 .map_logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+#map2 .old_img {
+  position: absolute;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#map2 .zoomy {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  display: none;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 3px 3px 10px #000;
+  -moz-box-shadow: 3px 3px 10px #000;
+  border: 0;
+  line-height: 100px;
+  text-align: center;
+  background-position: center;
+  background-color: #fff;
+  z-index: 1000;
 }
 #wechat {
   float: left;
@@ -1052,24 +1196,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/PE1.png);
+  background-image: url(../picture/PE1.png);
 }
 #service .PE .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/PE2.png);
+  background-image: url(../picture/PE2.png);
 }
 #service .PE a:hover .pic1 {
-  background-image: url(../images/PE1_after.png);
+  background-image: url(../picture/PE1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .PE a:hover .pic2 {
-  background-image: url(../images/PE2_after.png);
+  background-image: url(../picture/PE2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
@@ -1080,24 +1224,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/lecture1.png);
+  background-image: url(../picture/lecture1.png);
 }
 #service .lecture .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/lecture2.png);
+  background-image: url(../picture/lecture2.png);
 }
 #service .lecture a:hover .pic1 {
-  background-image: url(../images/lecture1_after.png);
+  background-image: url(../picture/lecture1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .lecture a:hover .pic2 {
-  background-image: url(../images/lecture2_after.png);
+  background-image: url(../picture/lecture2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
@@ -1108,24 +1252,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/exam1.png);
+  background-image: url(../picture/exam1.png);
 }
 #service .exam .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/exam2.png);
+  background-image: url(../picture/exam2.png);
 }
 #service .exam a:hover .pic1 {
-  background-image: url(../images/exam1_after.png);
+  background-image: url(../picture/exam1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .exam a:hover .pic2 {
-  background-image: url(../images/exam2_after.png);
+  background-image: url(../picture/exam2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
@@ -1136,24 +1280,24 @@ body {
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/evaluate1.png);
+  background-image: url(../picture/evaluate1.png);
 }
 #service .evaluate .pic2 {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-image: url(../images/evaluate2.png);
+  background-image: url(../picture/evaluate2.png);
 }
 #service .evaluate a:hover .pic1 {
-  background-image: url(../images/evaluate1_after.png);
+  background-image: url(../picture/evaluate1_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 #service .evaluate a:hover .pic2 {
-  background-image: url(../images/evaluate2_after.png);
+  background-image: url(../picture/evaluate2_after.png);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
@@ -1268,40 +1412,37 @@ resposive_layout
   #news .row .content2 {
     margin: 100px auto 52px auto;
   }
-  #blog .sample {
+  #notice .sample {
     height: 586px;
   }
-  #blog .sample_little {
-    height: 302px;
+  #notice .wrapper {
+    width: 426px;
+    padding-top: 60px;
   }
-  #blog .mask .wrapper {
-    width: 326px;
-    padding-top: 93px;
+  #notice .wrapper ul {
+    margin-top: 50px;
   }
-  #blog .mask h1 {
-    font-size: 4.31rem;
-    text-align: center;
+  #notice .wrapper ul li {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
   }
-  #blog .mask .icons {
-    width: 292px;
-    height: 57px;
-    margin: 64px auto 59px;
+  #life .container {
+    margin-top: 30px;
   }
-  #blog .mask .icons .icon2 {
-    margin-left: 56px;
+  #life .container h1 {
+    margin-bottom: 60px;
   }
-  #blog .mask p {
-    font-size: 1.625rem;
-    line-height: 3.125rem;
+  #life .container .life_part {
+    height: 260px;
   }
-  #blog .mask .detail {
-    font-size: 2rem;
-    margin-top: 45px;
+  #life .container .life_part .img_wrapper {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
   }
-  #blog .blog4 .more {
-    width: 76px;
-    height: 23px;
-    margin-left: -38px;
+  #life .container .life_part .img_wrapper img {
+    width: 100%;
+    height: 100%;
   }
   #college {
     height: 672px;
@@ -1478,6 +1619,32 @@ resposive_layout
   #news .content2 .info {
     margin-top: 20px;
   }
+  #notice .wrapper {
+    width: 526px;
+  }
+  #notice .wrapper h1 {
+    font-size: 4.125rem;
+    text-align: center;
+  }
+  #notice .wrapper ul {
+    margin-top: 50px;
+  }
+  #notice .wrapper ul li {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+  }
+  #life .container {
+    margin-top: 55px;
+  }
+  #life .container h1 {
+    margin-bottom: 90px;
+  }
+  #life .container .life_part {
+    height: 300px;
+  }
+  #life .container .life_part .img_wrapper {
+    height: 200px;
+  }
   #service .lecture,
   #service .evaluate {
     margin-left: 0;
@@ -1501,6 +1668,12 @@ resposive_layout
   }
   #nav ul li:nth-child(5) {
     margin-top: 5%;
+  }
+  #life .container .life_part {
+    height: 400px;
+  }
+  #life .container .life_part .img_wrapper {
+    height: 300px;
   }
   #college .marquee_overflow .marquee_wrapper li .li_wrapper {
     margin: 20px 150px;
