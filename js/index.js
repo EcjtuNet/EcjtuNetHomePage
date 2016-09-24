@@ -26,7 +26,7 @@ $(window).load(function () {
     });
 });
 $(document).ready(function(){	
-	$().UItoTop({ easingType: 'easeOutQuart' });
+	//$().UItoTop({ easingType: 'easeOutQuart' });
 								
 /*
 news slider start
@@ -159,14 +159,14 @@ map start
     	}).bind("mouseout",function(){
 			$(wrapper).addClass('blur');
     	});
-    	btn_close.bind("click",function(event){
-    		event.preventDefault();
-    		$(map2).fadeOut(600);
-    	});
-    	btn_open.bind("click",function(event){
-    		event.preventDefault();
-    		$(map2).fadeIn(600);
-    	});
+    	// btn_close.bind("click",function(event){
+    	// 	event.preventDefault();
+    	// 	$(map2).fadeOut(600);
+    	// });
+    	// btn_open.bind("click",function(event){
+    	// 	event.preventDefault();
+    	// 	$(map2).fadeIn(600);
+    	// });
     }())
 
 /*
