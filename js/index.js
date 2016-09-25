@@ -31,7 +31,7 @@ $(document).ready(function(){
 /*
 news slider start
  */
- 	// console.log("一张网页，要经历怎样的过程，才能抵达用户面前？一位新人，要经历怎样的成长，才能站在技术之巅？探寻这里的秘密；体验这里的挑战；成为这里的主人；一同加入华东交通大学日新网技术中心把！ http://hr.ecjtu.net/");
+ 	console.log("Welcome To Rixin BIG FAMILY ^_^ http://hr.ecjtu.net/");
 	var wrapper = $(".news_wrapper"),
 		icons = $(".slider li");
 
@@ -89,12 +89,14 @@ runToNews start
 
     function runToNews(){  
 	    currentPosition=document.documentElement.scrollTop || document.body.scrollTop;  
+	    //console.log(currentPosition); 
 	    currentPosition+=7;  
 	    var	nav = document.getElementsByClassName("navbar2");
 	    var newsTop = (news.offset().top)-nav[0].clientHeight;
 	    if(currentPosition<newsTop+6)  
 	    {  
-	        window.scrollTo(0,currentPosition);  
+	        window.scrollTo(0,currentPosition);
+	        //console.log(currentPosition); 
 	    }  
 	    else  
 	    {  
@@ -107,13 +109,16 @@ runToNews end
 
 /*
 scrollShowNav start
+&& runToTop
  */
 	function scrollShowNav(){
 		var	navbar1 = $(".navbar1"),
-	    	navbar2 = $(".navbar2");
+	    	navbar2 = $(".navbar2"),
+	    	toTop = $("#toTop"),
+	    	windowHeight = $(window).height();
 		$(window).scroll(function () {
 			//watch scroll distance timely
-			var navTop = $(window).scrollTop();
+			var navTop = $(document).scrollTop();
         	if(navTop>=33){
         		navbar1.addClass('none');
         		navbar2.removeClass('none');
@@ -121,8 +126,32 @@ scrollShowNav start
         		navbar1.removeClass('none');
         		navbar2.addClass('none');
         	}
+        	//console.log("a"+navTop);
+        	//console.log("b"+windowHeight);
+        	if(navTop>=windowHeight/2){
+        		toTop.fadeIn(500);
+        	}else{
+        		toTop.fadeOut(500);
+        	}
 		});
 
+		toTop.bind("click",function(event){
+			event.preventDefault();
+			timer3 = setInterval(runToTop,1);
+		})
+        var runToTop = function(){
+        	var navTop2 = $(window).scrollTop();
+        	//console.log(navTop2);
+        	if(navTop2>0){
+        		navTop2-=15;
+        		//console.log("a"+navTop2);
+				window.scrollTo(0,navTop2);
+        	}else{
+        		clearInterval(timer3);
+        		//console.log("b"+navTop2);
+        	}			 
+		} 	
+		
 		var menu = $(".menu"),
 			nav = $("#nav"),
 			li = nav.find("ul").find("li"),
