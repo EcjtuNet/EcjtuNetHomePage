@@ -127,12 +127,12 @@ a:hover,
 a:active {
   text-decoration: none;
 }
-@font-face {
+/*@font-face {
   font-family: 'HanSansCN-Light';
   src: url(../fonts/SourceHanSansCN-Light.otf);
   font-weight: normal;
   font-style: normal;
-}
+}*/
 * {
   margin: 0;
   padding: 0;
@@ -143,7 +143,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: "HanSansCN-Light";
+  font-family: "Microsoft JhengHei";
   font-size: 100%;
 }
 @keyframes moreMove {
