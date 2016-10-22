@@ -38,9 +38,9 @@ news slider start
 	var newsSlider = function(){
 		var w_left = parseInt(wrapper.css("left")),
 			w_width = parseInt(wrapper.css("width"));
-		//w_left 0,-1,-2
 		w_left = (w_left / w_width);
-
+		//w_left 0,-1,-2
+		
 		icons.each(function(){
 			$(this).removeClass('active');
 		})
@@ -200,5 +200,39 @@ map start
 
 /*
 map end
+ */
+
+/*
+hoverDisplayBlock start
+ */
+	function hoverDisplayBlock(elem, target,outer){
+		var target = $(target);
+		$(elem).bind("mouseover",function(){
+			target.siblings('img').css("display","none");
+			target.css("display","block");
+			// $(target).siblings('img').fadeOut("100",function(){
+			// 	$(target).fadeIn("400");
+			// });
+		})
+		$(outer).bind("mouseover",function(){
+			target.css("display","none");
+			target.siblings('.iphone').css("display","block");
+			
+		})
+	}
+	hoverDisplayBlock(".qq_btn",".qq","#map,#service");
+	hoverDisplayBlock(".sina_btn",".sina","#map,#service");
+
+	var sample = $(".sample");
+	$(sample).each(function(){
+		$(this).bind("mouseover",function() {
+			$(this).find(".mask").css("opacity",1);
+		}).bind("mouseout",function(){
+			$(this).find(".mask").css("opacity",0);
+		})
+	})
+
+/*
+hoverDisplayBlock end
  */
 })

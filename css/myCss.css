@@ -238,15 +238,16 @@ body {
   background-size: cover;
   position: relative;
 }
-#header nav {
+#header .navbar {
   padding-top: 33px;
   color: #fff;
   z-index: 999;
 }
-#header nav .navbar-left {
+#header .navbar .navbar-left {
   position: relative;
+  float: left;
 }
-#header nav .navbar-left .nav_logo {
+#header .navbar .navbar-left .nav_logo {
   width: 48px;
   height: 48px;
   display: block;
@@ -254,40 +255,42 @@ body {
   background-position: 0 -753px;
   background-repeat: no-repeat;*/
 }
-#header nav .navbar-left .nav_logo img{
+#header .navbar .navbar-left .nav_logo img{
 	width: 100%;
 	height: 100%;
 }
-#header nav .navbar-left .rixin_desc {
+#header .navbar .navbar-left .rixin_desc {
   position: absolute;
   left: 60px;
   top: 0;
   width: 50px;
 }
-#header nav .navbar-left .rixin_desc .rixin_name {
+#header .navbar .navbar-left .rixin_desc .rixin_name {
   font-size: 25px;
   margin-top: 5px;
 }
-#header nav .navbar-left .rixin_desc .rixin_name2 {
+#header .navbar .navbar-left .rixin_desc .rixin_name2 {
   font-size: 15px;
   margin-left: 3px;
 }
-#header nav .navbar-right {
+#header .navbar .navbar-right {
+  position: relative;
   margin-right: 0;
+  float: right !important;
 }
-#header nav .navbar-right .menu {
+#header .navbar .navbar-right .menu {
   position: relative;
   display: block;
   color: #ffffff;
 }
-#header nav .navbar-right .menu .nav_menu {
+#header .navbar .navbar-right .menu .nav_menu {
   font-size: 30px;
   display: inline-block;
   float: left;
   margin-top: 11px;
   margin-right: 86px;
 }
-#header nav .navbar-right .menu .nav_pub {
+#header .navbar .navbar-right .menu .nav_pub {
   position: absolute;
   display: inline-block;
   right: 0;
@@ -301,8 +304,8 @@ body {
   -o-transition: all .3s ease;
   transition: all 0.3s ease;
 }
-#header nav .navbar-right .menu .nav_pub:before,
-#header nav .navbar-right .menu .nav_pub:after {
+#header .navbar .navbar-right .menu .nav_pub:before,
+#header .navbar .navbar-right .menu .nav_pub:after {
   position: absolute;
   display: inline-block;
   left: 0;
@@ -320,27 +323,28 @@ body {
   -o-transform-origin: 5px center 0;
   transform-origin: 5px center 0;
 }
-#header nav .navbar-right .menu .nav_pub:before {
+#header .navbar .navbar-right .menu .nav_pub:before {
   top: -12px;
 }
-#header nav .navbar-right .menu .nav_pub:after {
+#header .navbar .navbar-right .menu .nav_pub:after {
   top: 12px;
 }
-#header nav .navbar-right .menu img {
+#header .navbar .navbar-right .menu img {
   height: 32px;
   width: 38px;
   display: inline-block;
   float: left;
   margin-top: 8px;
 }
-#header nav .navbar-right .closer {
+#header .navbar .navbar-right .closer {
   opacity: 1;
   -moz-opacity: 1;
   -webkit-opacity: 1;
+  /* 针对 IE8 以及更早的版本 */
   filter: alpha(opacity=100);
   -ms-filter: "alpha(opacity=100)";
 }
-#header nav .navbar-right .closer:hover .nav_pub {
+#header .navbar .navbar-right .closer:hover .nav_pub {
   opacity: 1;
   -moz-opacity: 1;
   -webkit-opacity: 1;
@@ -357,10 +361,10 @@ body {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-#header nav .navbar-right .closer .nav_pub {
+#header .navbar .navbar-right .closer .nav_pub {
   height: 0;
 }
-#header nav .navbar-right .closer .nav_pub:after {
+#header .navbar .navbar-right .closer .nav_pub:after {
   position: absolute;
   left: -5px;
   top: 0;
@@ -379,7 +383,7 @@ body {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-#header nav .navbar-right .closer .nav_pub:before {
+#header .navbar .navbar-right .closer .nav_pub:before {
   position: absolute;
   left: -5px;
   top: 0;
@@ -438,6 +442,7 @@ body {
   margin: 0 auto;
 }
 #header .content .motto {
+  font-size: 74px;
   font-size: 4.625rem;
   color: #fff;
   text-align: left;
@@ -449,6 +454,7 @@ body {
   width: 405px;
   height: 42px;
   margin: 53px auto;
+  font-size: 42px;
   font-size: 2.625rem;
   color: #ffffff;
 }
@@ -522,8 +528,14 @@ body {
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
+#nav ul .li_1{
+  margin-top: 12%;
+}
 #nav ul li:nth-child(1) {
   margin-top: 12%;
+}
+#nav ul .li_5{
+  margin-top: 5%;
 }
 #nav ul li:nth-child(5) {
   margin-top: 5%;
@@ -557,6 +569,9 @@ body {
   width: 100%;
   left: 200%;
 }
+#news .news_content_link{
+  display: block;
+}
 #news .row {
   padding-bottom: 58px;
 }
@@ -567,6 +582,7 @@ body {
   background-position: -291px -784px;
 }
 #news .row .heading .more {
+  font-size: 36px;
   font-size: 2.25rem;
   color: #D0D0D0;
   float: right;
@@ -606,6 +622,7 @@ body {
   padding: 35px 0 0 4.95%;
 }
 #news .content .info .title {
+  font-size: 30px;
   font-size: 1.875rem;
   color: #989898;
   font-weight: bold;
@@ -614,7 +631,9 @@ body {
   float: left;
   margin-top: 70px;
   width: 81.5%;
+  font-size: 24px;
   font-size: 1.5rem;
+  line-height: 60px;
   line-height: 3.75rem;
   color: #989898;
 }
@@ -637,6 +656,7 @@ body {
 #news .content .info .learnmore .img {
   width: 125px;
   height: 20px;
+  margin:0 auto;
   background-image: url(../picture/myCss.png);
   background-position: -374px -789px;
   background-repeat: no-repeat; 
@@ -708,6 +728,7 @@ body {
   text-align: left;
 }
 #notice .wrapper h1 {
+  font-size: 50px;
   font-size: 3.125rem;
   text-align: left;
   font-weight: bold;
@@ -717,7 +738,9 @@ body {
   list-style: disc;
 }
 #notice .wrapper ul li {
+  font-size: 26px;
   font-size: 1.625rem;
+  line-height: 40px;
   line-height: 2.5rem;
   text-align: left;
 }
@@ -730,9 +753,17 @@ body {
 }
 #notice .notice1 {
   background-image: url(../picture/notice1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*-ms-behavior: url(./backgroundsize.min.htc); 
+  behavior: url(backgroundsize.min.htc);*/
 }
 #notice .notice2 {
   background-image: url(../picture/notice2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*-ms-behavior: url(./backgroundsize.min.htc); 
+  behavior: url(backgroundsize.min.htc);*/
 }
 #notice .more_wrapper {
   width: 100%;
@@ -768,6 +799,7 @@ body {
   margin: 55px auto;
 }
 #life .container h1 {
+  line-height: 50px;
   font-size: 3.125rem;
   font-weight: bold;
   text-align: center;
@@ -817,10 +849,12 @@ body {
   position: relative;
 }
 #life .container .life_part .content .name {
+  font-size: 22px;
   font-size: 1.375rem;
   color: #ffffff;
 }
 #life .container .life_part .content .date {
+  font-size: 18px;
   font-size: 1.125rem;
   position: absolute;
   left: 50%;
@@ -951,7 +985,9 @@ body {
 #college .marquee_overflow .marquee_wrapper li .li_wrapper p {
   width: 260px;
   margin: 0 auto;
+  font-size: 16px;
   font-size: 1rem;
+  line-height: 17px;
   line-height: 1.06rem;
   color: #7f7f7f;
 }
@@ -1071,6 +1107,7 @@ body {
   margin: 95px auto auto;
 }
 #map .content h1 {
+  font-size: 70px;
   font-size: 4.375rem;
   font-weight: bold;
   color: #fff;
@@ -1115,6 +1152,7 @@ body {
   width: 70px;
   height: 70px;
   z-index: 9999;
+  font-size: 48px;
   font-size: 3rem;
 }
 #map2 .map_close img {
@@ -1173,7 +1211,7 @@ body {
   position: relative;
 }
 #wechat .wrapper {
-  width: 872px;
+  width: 1032px;
   height: 380px;
   overflow: hidden;
   position: absolute;
@@ -1181,9 +1219,10 @@ body {
   right: 13.9%;
 }
 #wechat .wrapper .iphone {
-  width: 336px;
+  width: 328px;
   /*height: 100%;*/
   float: left;
+  margin-left: 173px;
     /*background-image: url(../picture/myCss.png);
     background-position: 0 0;*/
 }
@@ -1192,11 +1231,50 @@ body {
   width: 346px;
 }
 #wechat .wrapper h1 {
+  font-size: 46px;
   font-size: 2.93rem;
+  line-height: 97px;
   line-height: 6.125rem;
   color: #686868;
 }
-#wechat .wrapper .readmore {
+#wechat .wrapper .btns{
+  margin:40px 42px auto;
+}
+#wechat .wrapper .btns a{
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+#wechat .wrapper .btns .sina_btn{
+  float: left;
+  background-image: url(../picture/sina_logo.png);
+  background-repeat: no-repeat;
+}
+#wechat .wrapper .btns .sina_btn:hover{
+  background-image: url(../picture/sina_logo_after.png);
+  background-repeat: no-repeat;
+}
+#wechat .wrapper .btns .qq_btn{
+  float: right;
+  background-image: url(../picture/qq_logo.png);
+  background-repeat: no-repeat;
+}
+#wechat .wrapper .btns .qq_btn:hover{
+  background-image: url(../picture/qq_logo_after.png);
+  background-repeat: no-repeat;
+}
+#wechat .wrapper .sina,#wechat .wrapper .qq{
+  display: none;
+  width: 620px;
+  float: left;
+}
+#wechat .wrapper .qq{
+  margin-left: 30px;
+}
+#wechat .btns .sina_btn:hover .sina{
+  display: block;
+}
+/*#wechat .wrapper .readmore {
   display: block;
   width: 260px;
   height: 85px;
@@ -1219,16 +1297,17 @@ body {
 #wechat .wrapper .readmore:hover {
   background-color: #2EA7C9;
   color: #ffffff;
-}
+}*/
 #news h1,
 #service h1 {
+  font-size: 66px;
   font-size: 4.125rem;
   color: #99A0A5;
   display: block;
   margin-top: 77px;
 }
 #service h1 {
-  margin-bottom: 85px;
+  margin-bottom: 135px;
 }
 #news h1 .h1_sub,
 #service h1 .h1_sub {
@@ -1266,7 +1345,8 @@ body {
   width: 118px;
   height: 212px;
   position: relative;
-  float: right;
+  float: left;
+  margin-left: 30px;
 }
 #service .pic1 {
   display: inline-block;
@@ -1297,7 +1377,6 @@ body {
 #service .searchGrade,
 #service .evaluate {
   margin-left: 4.7%;
-  margin-top: 50px;
 }
 #service .lecture .name {
   margin-left: 20px;
@@ -1411,9 +1490,10 @@ body {
 }
 #service .more {
   position: absolute;
+  font-size: 36px;
   font-size: 2.25rem;
   color: #D0D0D0;
-  right: 268px;
+  right: 258px;
   bottom: 25px;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
@@ -1442,6 +1522,7 @@ body {
 }
 #footer .links label {
   width: 100%;
+  font-size: 30px;
   font-size: 1.875rem;
   color: #BFC0C2;
   padding-bottom: 23px;
@@ -1453,7 +1534,9 @@ body {
   width: 100%;
 }
 #footer .links .content li {
+  font-size:20px;
   font-size: 1.25rem;
+  line-height: 40px;
   line-height: 2.5rem;
   float: left;
   margin-right: 33px;
@@ -1471,7 +1554,9 @@ body {
 #footer .copyright {
   color: #BFC0C2;
   text-align: center;
+  font-size: 20px;
   font-size: 1.25rem;
+  line-height: 40px;
   line-height: 2.5rem;
   margin-bottom: 50px;
 }
@@ -1484,6 +1569,7 @@ body {
   }
   #news h1,
   #service h1 {
+    font-size: 50px;
     font-size: 3.125rem;
     margin-top: 50px;
   }
@@ -1495,11 +1581,14 @@ body {
     padding-top: 22px;
   }
   #news .row .content .info .title {
+    font-size: 22px;
     font-size: 1.43rem;
   }
   #news .row .content .info .main {
     margin-top: 53px;
+    font-size: 18px;
     font-size: 1.125rem;
+    line-height: 42px;
     line-height: 2.68rem;
   }
   /*#news .row .content .learnmore {
@@ -1526,7 +1615,9 @@ body {
     margin-top: 50px;
   }
   #notice .wrapper ul li {
+    font-size: 16px;
     font-size: 1.3rem;
+    line-height: 35px;
     line-height: 2.2rem;
   }
   #life .container {
@@ -1574,7 +1665,9 @@ body {
   }*/
   #college .marquee_overflow .marquee_wrapper li .li_wrapper p {
     width: 195px;
+    font-size: 12px;
     font-size: .81rem;
+    line-height: 12px;
     line-height: 0.93rem;
   }
   #college .marquee_overflow .marquee_wrapper li .li_wrapper a {
@@ -1593,6 +1686,7 @@ body {
     margin: 95px auto auto;
   }
   #map .content h1 {
+    font-size: 50px;
     font-size: 3.125rem;
     text-indent: 20px;
   }
@@ -1606,26 +1700,35 @@ body {
     height: 356px;
   }
   #wechat .wrapper {
-    width: 667px;
+    width: 781px;
     height: 280px;
   }
   #wechat .wrapper .iphone {
-    width: 258px;
+    width: 248px;
+    margin-left: 130px;
   }
   #wechat .wrapper .content {
     width: 272px;
   }
   #wechat .wrapper h1 {
+    font-size: 36px;
     font-size: 2.31rem;
+    line-height: 74px;
     line-height: 4.625rem;
   }
-  #wechat .wrapper .readmore {
+  #wechat .wrapper .sina, #wechat .wrapper .qq {
+    width: 470px;
+  }
+  #wechat .wrapper .qq {
+    margin-left: 22px;
+  }
+  /*#wechat .wrapper .readmore {
     width: 195px;
     height: 65px;
     line-height: 65px;
     font-size: 1.25rem;
     box-shadow: -3px 3px 6px 1px #cbcbcb;
-  }
+  }*/
   #service .row {
     padding-bottom: 107px;
   }
@@ -1633,10 +1736,11 @@ body {
     margin-left: 20px;
     height: 54px;
     line-height: 54px;
+    font-size: 18px;
     font-size: 1.25rem;
   }
   #service h1 {
-    margin-bottom: 45px;
+    margin-bottom: 95px;
   }
   #service .searchCurriculum .name,
   #service .searchGrade .name {
@@ -1662,6 +1766,7 @@ body {
     margin-top: 39px;
   }
   #service .more {
+    font-size: 28px;
     font-size: 1.75rem;
     right: 200px;
   }
@@ -1678,7 +1783,9 @@ body {
   }
   #news .row .content .info .main {
     margin-top: 30px;
+    font-size: 16px;
     font-size: 1rem;
+    line-height: 32px;
     line-height: 2rem;
   }
   #news .row .content .learnmore {
@@ -1710,7 +1817,7 @@ body {
     margin-top: 5%;
   }
   #news .content .info {
-    padding-left: 15px;
+    padding-left: 0;
   }
   #news .content .info .main {
     width: 100%;
@@ -1722,6 +1829,9 @@ body {
     margin-bottom: 20px;
     text-align: center;
   }
+  #news .content .pic{
+    padding-left: 0;
+  }
   #news .content2 .info {
     margin-top: 20px;
   }
@@ -1732,6 +1842,7 @@ body {
     width: 526px;
   }
   #notice .wrapper h1 {
+    font-size: 66px;
     font-size: 4.125rem;
     text-align: center;
   }
@@ -1739,7 +1850,9 @@ body {
     margin-top: 50px;
   }
   #notice .wrapper ul li {
+    font-size: 24px;
     font-size: 1.5rem;
+    line-height: 26px;
     line-height: 2.3rem;
   }
   #life .container {
