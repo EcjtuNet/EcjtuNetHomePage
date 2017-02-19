@@ -1630,7 +1630,7 @@ body {
     width: 100%;
   }
   #wechat {
-    height: 456px;
+    height: 477px;
     overflow: hidden;
   }
   #wechat .wrapper {
@@ -1661,6 +1661,16 @@ body {
   }
   #wechat .wrapper .qq2 {
     margin-right: 0;
+  }
+  #service .searchCurriculum,
+  #service .PE,
+  #service .wordType,
+  #service .ershou,
+  #service .lecture,
+  #service .post,
+  #service .searchGrade,
+  #service .evaluate {
+    margin-left: 5%;
   }
   #service .searchCurriculum a,
   #service .PE a,
