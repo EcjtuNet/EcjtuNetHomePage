@@ -2,25 +2,25 @@
 <html lang="zh-CN">
 <head>
     <meta charset="gbk">
-    <title>{dede:global.cfg_webname/}</title>
+     <title>{dede:global.cfg_webname/}</title>
     <meta content="all" name="robots"/>
     <meta name="author" content="Ecjtu.net"/>
     <meta name="description" content="{dede:global.cfg_description/}"/>
     <meta name="keywords" content="{dede:global.cfg_keywords/}"/>
     <meta name="baidu-tc-verification" content="ee1e74f7f23e053355570e1e5ebd24b7"/>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/myCss.css">   
+    <link rel="stylesheet" href="newCss/bootstrap.min.css">
+    <link rel="stylesheet" href="newCss/myCss.css">   
 </head>
 <body>
-<!-- <img class="video" src="picture/index.jpg" alt="">
+<!-- <img class="video" src="newPicture/index.jpg" alt="">
  -->
 <header id="header">
     <div class="topbar hidden-xs">
         <div class="container">
             <ul class="nav navbar-nav navbar-left">
                 <a class="nav_logo" href="http://www.ecjtu.net">
-                    <img src="picture/logo2.png">
+                    <img src="newPicture/logo2.png">
                 </a>
                 <ul class="nav navbar-nav rixin_desc">
                     <li class="rixin_name">日新</li>
@@ -44,11 +44,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">日新</a>
+          <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="http://www.ecjtu.net/">日新</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">新闻网</a></li>
+            <li class="active"><a href="http://www.ecjtu.net/html/ecjtunews1/">新闻网</a></li>
             <li><a href="http://www.ecjtu.jx.cn/" target="_blank">学校官网</a></li>
             <li><a href="#news">交大资讯</a></li>
             <li><a href="#service">日新服务</a></li>
@@ -60,9 +60,9 @@
       </div>
     </nav>
     <div class="hot_img">
-        <img class="bg" src="picture/index.jpg">
+        <img class="bg" src="newPicture/index.jpg">
         <div class="content">
-            <img class="motto" src="picture/motto.png">
+            <img class="motto" src="newPicture/motto.png">
         </div>
     </div>
 </header>
@@ -72,7 +72,8 @@
             <ul class="nav">
                 <li class ="active"><a href="#rixinNews" data-toggle="tab">日新新闻</a></li><!--里面有日新言论，日新访谈, 日新聚焦, 孔目湖访谈-->
                 <li><a href="#rixinCompass" data-toggle="tab">校园资讯</a></li><!--里面有最新通告，热点速递-->
-                <li><a href="#rixinProduct" data-toggle="tab">产品动态</a></li><!--里面有微信，微博，QQ，影视工作室-->
+				<li><a href="http://www.ecjtu.net/html/ecjtunews1/" >更多资讯</a></li>
+                <!--<li><a href="#rixinProduct" data-toggle="tab">产品动态</a></li> --> <!--里面有微信，微博，QQ，影视工作室-->
             </ul>
             <div class="tab-content">
                 <div class="content tab-pane fade in active" id="rixinNews">
@@ -81,11 +82,9 @@
                         <div class="part_content">
                             <h2><a href=""><span class="part_no2">1</span>日新言论</a></h2>
                             <ul>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
+								{dede:arclist typeid='52' row='5' titlelen='36' limit='1,5'}
+                                <li><a href="[field:arcurl/]" target="_blank"><i></i>[field:title/]</a></li>
+								{/dede:arclist}
                             </ul>    
                         </div>
                     </div>
@@ -94,11 +93,9 @@
                         <div class="part_content">
                             <h2><a href=""><span class="part_no2">2</span>日新访谈</a></h2>
                             <ul>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
+								{dede:arclist typeid='24' row='5' titlelen='36' limit='0,5'}
+                                <li><a href="[field:arcurl/]" target="_blank"><i></i>[field:title/]</a></li>
+								{/dede:arclist}
                             </ul>    
                         </div>
                     </div>
@@ -107,11 +104,11 @@
                         <div class="part_content">
                             <h2><a href=""><span class="part_no2">3</span>日新聚焦</a></h2>
                             <ul>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
+                                <li><a href="javascript:void(0)" target="_blank"><i></i>暂无信息</a></li>
+								<li><a href="javascript:void(0)" target="_blank"><i></i>暂无信息</a></li>
+								<li><a href="javascript:void(0)" target="_blank"><i></i>暂无信息</a></li>
+								<li><a href="javascript:void(0)" target="_blank"><i></i>暂无信息</a></li>
+								<li><a href="javascript:void(0)" target="_blank"><i></i>暂无信息</a></li>
                             </ul>    
                         </div>
                     </div>
@@ -120,11 +117,9 @@
                         <div class="part_content">
                             <h2><a href=""><span class="part_no2">4</span>孔目湖访谈</a></h2>
                             <ul>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
+                                {dede:arclist typeid='53' row='5' titlelen='36'}
+                                <li><a href="[field:arcurl/]" target="_blank"><i></i>[field:shorttitle/]</a></li>
+								{/dede:arclist}
                             </ul>    
                         </div>
                         
@@ -136,11 +131,9 @@
                         <div class="part_content">
                             <h2><a href=""><span class="part_no2">1</span>最新通告</a></h2>
                             <ul>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
+                                {dede:arclist typeid='26' row='5' titlelen='36'}
+								<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+								{/dede:arclist}
                             </ul>    
                         </div>
                     </div>
@@ -149,16 +142,14 @@
                         <div class="part_content">
                             <h2><a href=""><span class="part_no2">2</span>热点速递</a></h2>
                             <ul>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
-                                <li><a href="" target="_blank"><i></i>苹果变身“平安果”，洋节日里的中国味</a></li>
+                                {dede:arclist flag='a' typeid='1,6,2,5,71' row='5' titlelen='44'}
+								<li><a href="[field:arcurl/]" target="_blank">[field:shorttitle/]</a></li>
+								{/dede:arclist}
                             </ul>    
                         </div>
                     </div>
                 </div>
-                <div class="content tab-pane fade" id="rixinProduct">
+                <!--<div class="content tab-pane fade" id="rixinProduct">
                     <div class="part col-sm-6 col-xs-12">
                         <p class="part_no hidden-xs">1</p>
                         <div class="part_content">
@@ -212,22 +203,22 @@
                         </div>
                         
                     </div>
-                </div>   
+                </div> -->
             </div>
         </div>
     </div>
 </div>
 <div id="tushuo">
-    <div class="pic hidden-sm hidden-xs"><a href="" target="_blank"><img src="picture/tushuo1.jpg"></a></div>
-    <div class="pic hidden-sm hidden-xs"><a href="" target="_blank"><img src="picture/tushuo2.jpg"></a></div>
-    <div class="pic hidden-sm hidden-xs"><a href="" target="_blank"><img src="picture/tushuo3.jpg"></a></div>
-    <div class="pic hidden-sm hidden-xs"><a href="" target="_blank"><img src="picture/tushuo4.jpg"></a></div>
-    <div class="pic hidden-sm hidden-xs"><a href="" target="_blank"><img src="picture/tushuo5.jpg"></a></div>
-    <div class="pic hidden-sm hidden-xs"><a href="" target="_blank"><img src="picture/tushuo6.jpg"></a></div>
-    <div class="pic hidden-xs"><a href="" target="_blank"><img src="picture/tushuo7.jpg"></a></div>
-    <div class="pic hidden-xs"><a href="" target="_blank"><img src="picture/tushuo8.jpg"></a></div>
-    <div class="pic"><a href="" target="_blank"><img src="picture/tushuo9.jpg"></a></div>
-    <div class="pic pic_more"><a class="more" href="" target="_blank">图说交大 更多<<</a></div>
+	{dede:arclist typeid='27' row='6' listtype='image' limit='0,6'}
+    <div class="pic hidden-sm hidden-xs"><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]"></a></div>
+	{/dede:arclist}
+	{dede:arclist typeid='27' row='2' listtype='image' limit='6,2'}
+    <div class="pic  hidden-xs"><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]"></a></div>
+	{/dede:arclist}
+	{dede:arclist typeid='27' row='1' listtype='image' limit='8,1'}
+    <div class="pic "><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]"></a></div>
+	{/dede:arclist}
+    <div class="pic pic_more"><a class="more" href="http://pic.ecjtu.net/" target="_blank">图说交大 更多<<</a></div>
 </div>
 <div id="consult">
     <div class="container">
@@ -239,10 +230,11 @@
                         <div class="innerpic"></div>
                     </div>
                     <div class="part_content">
-                        <h2>日新时评</h2><a class="more" href="" target="_blank">更多</a>
+                        <h2>日新时评</h2><a class="more" href="http://www.ecjtu.net/html/news/rixinshiping/" target="_blank">更多</a>
                         <ul>
-                            <li><a href="" target="_blank"><i class="i1"></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                            <li><a href="" target="_blank"><i class="i1"></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
+							{dede:arclist typeid='75' row='2' titlelen='36'}
+							<li><a href="[field:arcurl/]" target="_blank"><i class="i1"></i>[field:shorttitle/]</a></li>
+							{/dede:arclist}
                         </ul>
                     </div>
                 </div>
@@ -251,10 +243,11 @@
                         <div class="innerpic"></div>
                     </div>
                     <div class="part_content">
-                        <h2>日新论坛</h2><a class="more" href="" target="_blank">更多</a>
+                        <h2>日新论坛</h2><a class="more" href="javascript:void(0)" target="_blank">更多</a>
                         <ul>
-                            <li><a href="" target="_blank"><i class="i2"></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                            <li><a href="" target="_blank"><i class="i2"></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
+							{dede:arclist typeid='67' row='2' titlelen='36'}
+							<li><a href="[field:arcurl/]" target="_blank"><i class="i2"></i>[field:shorttitle/]</a></li>
+							{/dede:arclist}
                         </ul>
                     </div>
                 </div>
@@ -263,10 +256,11 @@
                         <div class="innerpic"></div>
                     </div>
                     <div class="part_content">
-                        <h2>最新通告</h2><a class="more" href="" target="_blank">更多</a>
+                        <h2>最新通告</h2><a class="more" href="http://www.ecjtu.net/html/news/rixingonggao/" target="_blank">更多</a>
                         <ul>
-                            <li><a href="" target="_blank"><i class="i3"></i>苹果变身“平安果”，洋节日里的中国味</a></li>
-                            <li><a href="" target="_blank"><i class="i3"></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
+							{dede:arclist typeid='26' row='2' titlelen='36'}
+							<li><a href="[field:arcurl/]" target="_blank"><i class="i3"></i>[field:shorttitle/]</a></li>
+							{/dede:arclist}
                         </ul>
                     </div>
                 </div>
@@ -275,10 +269,10 @@
                         <div class="innerpic"></div>
                     </div>
                     <div class="part_content">
-                    <h2>资料查询</h2><a class="more" href="" target="_blank">更多</a>
+                    <h2>资料查询</h2><a class="more" href="javascript:void(0)" target="_blank">更多</a>
                     <ul>
-                        <li><a href="test.doc" download=""><i class="i4"></i>下载资料</a></li>
-                        <li><a href="" download=""><i class="i4"></i>苹果变身“平安果”，洋节日里的中国味sssssssss</a></li>
+                        <li><a href="javascript:void(0)" ><i class="i4"></i>暂时未开通</a></li>
+                        <li><a href="javascript:void(0)" ><i class="i4"></i>暂时未开通</a></li>
                     </ul>
                     </div>
                 </div>
@@ -288,10 +282,10 @@
 </div>
 <div id="wechat">
     <div class="wrapper">
-        <img src="picture/iphone.jpg" class="iphone" alt="">
-        <img src="picture/sina.jpg" class="sina" alt="">
-        <img src="picture/qq.jpg" class="qq" alt="">
-        <img src="picture/wechat.jpg" class="wechat" alt="">
+        <img src="newPicture/iphone.jpg" class="iphone" alt="">
+        <img src="newPicture/sina.jpg" class="sina" alt="">
+        <img src="newPicture/qq.jpg" class="qq" alt="">
+        <img src="newPicture/wechat.jpg" class="wechat" alt="">
         <!-- <div class="iphone"></div> -->
         <div class="content">
             <h1>关注日新 公众号</h1>
@@ -303,17 +297,17 @@
             </div>
         </div>
         <div>
-            <img src="picture/iphone.jpg" class="iphone2" alt="">
-            <img src="picture/sina.jpg" class="sina2" alt="">
-            <img src="picture/qq.jpg" class="qq2" alt="">
-            <img src="picture/wechat.jpg" class="wechat2" alt="">    
+            <img src="newPicture/iphone.jpg" class="iphone2" alt="">
+            <img src="newPicture/sina.jpg" class="sina2" alt="">
+            <img src="newPicture/qq.jpg" class="qq2" alt="">
+            <img src="newPicture/wechat.jpg" class="wechat2" alt="">    
         </div>
     </div>
 </div>
 <div id="service">
     <div class="container">
         <div class="row">
-            <h1>服务<span class="h1_sub"><!-- <img src="picture/service.png" alt="service"></span> -->
+            <h1>服务<span class="h1_sub"><!-- <img src="newPicture/service.png" alt="service"></span> -->
             <div class="pic"></div></span>
             </h1>
             <div class="searchCurriculum col-md-2 col-md-offset-1 col-sm-5 col-sm-offset-2">
@@ -376,9 +370,9 @@
     </div>
 </div>
 <!--<div id="map2">
-    <a href="" class="map_close"><img src="picture/close.png" alt=""></a>
-        <img class="old_img" src="picture/map2.png" />
-    <img src="picture/map_logo.png" class="map_logo" alt="">
+    <a href="" class="map_close"><img src="newPicture/close.png" alt=""></a>
+        <img class="old_img" src="newPicture/map2.png" />
+    <img src="newPicture/map_logo.png" class="map_logo" alt="">
 </div>-->
 <div id="footer">
     <div class="container">
@@ -416,8 +410,8 @@
 <a href="" id="toTop">
     <span id="toTopHover"></span>
 </a>
-<script type="text/javascript" src="js/jquery-1.9.1_2.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="newJs/jquery-1.9.1_2.js"></script>
+<script type="text/javascript" src="newJs/index.js"></script>
+<script type="text/javascript" src="newJs/bootstrap.min.js"></script>
 </body>
 </html>
