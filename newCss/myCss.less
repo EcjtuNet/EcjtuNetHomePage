@@ -142,10 +142,10 @@ a:active {
 //a链接鼠标悬浮色
 @hover_color: #064665;
 //资讯四个板块的颜色
-@consult_color1: #97CB6F;
-@consult_color2: #B88CCF;
-@consult_color3: #FF953A;
-@consult_color4: #6AC7C1;
+@moreNews_color1: #97CB6F;
+@moreNews_color2: #B88CCF;
+@moreNews_color3: #FF953A;
+@moreNews_color4: #6AC7C1;
 * {
   margin: 0;
   padding: 0;
@@ -255,7 +255,7 @@ body {
   position: relative;
 }
 #header .topbar {
-  padding: 33px 0 23px;
+  padding: 23px 0 13px;
   color: @blue_color;
   z-index: 999;
 }
@@ -414,6 +414,17 @@ body {
     .navbar-header{
       .icon-bar{
         background-color: @blue_color;
+      }
+      .logo_slide{
+        width: 1.875rem;//30px;
+        height: 1.875rem;//30px;
+        float: left;
+        margin-top: -0.3rem;//-5px;
+        display: inline-block;
+      }
+      .rixin_name{
+        float: left;
+        margin-left: 4px;
       }
     }
     #navbar{
@@ -597,7 +608,7 @@ body {
   }
 }
 /*更多咨询部分*/
-#consult{
+#moreNews{
   width: 100%;
   float: left;
   h1{
@@ -624,8 +635,8 @@ body {
         position: relative;
       }
       .icon1{
-        background-color: @consult_color1;
-        /* background-image: url(../newPicture/consult1.png); */
+        background-color: @moreNews_color1;
+        /* background-image: url(../newPicture/moreNews1.png); */
         .innerpic{
           position: absolute;
           width: 49px;
@@ -637,8 +648,8 @@ body {
         }
       }
       .icon2{
-        background-color: @consult_color2;
-        /* background-image: url(../newPicture/consult2.png); */
+        background-color: @moreNews_color2;
+        /* background-image: url(../newPicture/moreNews2.png); */
         .innerpic{
           position: absolute;
           width: 49px;
@@ -650,8 +661,8 @@ body {
         }
       }
       .icon3{
-        background-color: @consult_color3;
-        /* background-image: url(../newPicture/consult3.png); */
+        background-color: @moreNews_color3;
+        /* background-image: url(../newPicture/moreNews3.png); */
         .innerpic{
           position: absolute;
           width: 45px;
@@ -663,8 +674,8 @@ body {
         }
       }
       .icon4{
-        background-color: @consult_color4;
-        /* background-image: url(../newPicture/consult4.png); */
+        background-color: @moreNews_color4;
+        /* background-image: url(../newPicture/moreNews4.png); */
         .innerpic{
           position: absolute;
           width: 52px;
@@ -1190,9 +1201,6 @@ body {
   .container {
     width: 1060px;
   }
-  #header .topbar {
-    padding: 33px 0 23px;
-  }
   #header .topbar .navbar-left .nav_logo {
     width: 38px;
     height: 38px;
@@ -1301,13 +1309,13 @@ body {
       }
     }
   }
-  #consult{
+  #moreNews{
     h1{
       font-size: 2.625rem;//42px
       margin:3.25rem auto 3.75rem;//52px auto 60px;
     }
     .content{
-      margin-bottom: 5rem;//80px
+      margin-bottom: 3rem;
       font-size: 0.9rem;
       .part{
         margin-bottom: 1.6rem;//27px
@@ -1500,7 +1508,7 @@ body {
       font-size: 1.1rem;
     }
   }   
-  #consult{
+  #moreNews{
     .content{
       .part{
         .icon{
@@ -1534,14 +1542,18 @@ body {
   .navbar-toggle{
     margin-right: 0;
   }
-  #header .hot_img .motto {
-    width: 80%;
-    height: auto;
+  #header .hot_img{
+    height: 12.5rem;
+    .motto {
+      width: 80%;
+      height: auto;
+    } 
   }
+  
   #news{
     .nav{
       width: 100%;
-      margin: 2.5rem auto 3rem;
+      margin: 2.5rem auto 1.7rem;
       li{
         padding: 14px 25px;
       }
@@ -1565,34 +1577,83 @@ body {
     }
   }
   #tushuo{
+    padding:0 10px;
     .pic{
       width: 50%;
     } 
   }   
-  #consult .content .part{
-    &:nth-child(1) h2{
-      color: @consult_color1;
+  // #moreNews{
+  //   h1{
+  //     font-size: 1.625rem;
+  //     margin: 2rem auto 1.25rem;
+  //   }
+  //   .content .part{
+    
+  //   .part_content {
+  //     width: 100%;
+  //   } 
+  // } 
+  #moreNews{
+    h1{
+       font-size: 1.625rem;
+        margin: 2rem auto 1rem;
     }
-    &:nth-child(2) h2{
-      color: @consult_color2;
+    .content{
+      margin-bottom: 1rem;
+      .part{
+        margin: 0.8rem auto;
+        &:nth-child(1) h2{
+          color: @moreNews_color1;
+        }
+        &:nth-child(2) h2{
+          color: @moreNews_color2;
+        }
+        &:nth-child(3) h2{
+          color: @moreNews_color3;
+        }
+        &:nth-child(4) h2{
+          color: @moreNews_color4;
+        }
+        .icon{
+          margin: auto 1.5rem auto 4rem;//23px
+        }
+        .part_content{
+          width: 100%;
+          h2{
+            margin-left: 0;
+          }
+          ul{
+            padding-left: 0;
+            border-bottom: 1px solid #ddd; 
+          }
+        }  
+        &:nth-child(4) ul{
+          border-bottom: 0;
+        }
+      }   
     }
-    &:nth-child(3) h2{
-      color: @consult_color3;
-    }
-    &:nth-child(4) h2{
-      color: @consult_color4;
-    }
-    .part_content {
-      width: 100%;
-    } 
   }
   #wechat{
-    height: 477px;
+    height: 280px;
     overflow: hidden;
     .wrapper{
-      top: 3rem;
+      top: 2.4rem;
       bottom: auto;
       height: auto;
+      .content{
+        width: 200px;
+        margin-right: 1.7rem;
+        h1{
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+        .btns{
+            margin: 0 35px auto 15px;
+            a{
+              transform: scale(0.5);
+            }
+        }
+      }
     }
   }
   #wechat .wrapper .iphone, #wechat .wrapper .sina, #wechat .wrapper .qq, #wechat .wrapper .wechat{
@@ -1601,18 +1662,31 @@ body {
   #wechat .wrapper .iphone2{
     width: 140px;
     float: right;
-    margin: 2rem 70px auto auto;
+    margin: -25px 70px auto auto;
     display: block;
+    transform: scale(0.7);
   }
   #wechat .wrapper .sina2, #wechat .wrapper .qq2, #wechat .wrapper .wechat2{
     width: 270px;
     float: right;
-    margin-top: 2rem;
+    margin-top: -25px;
     margin-right: 10px;
     display: none;
+    transform: scale(0.7);
   }
   #wechat .wrapper .qq2{
     margin-right: 0;
+  }
+  #service .row{
+    padding-bottom: 17px;
+  }
+  #service h1{
+    font-size: 1.625rem;
+    margin: 2rem auto 1.5rem;
+  }
+  #service .name{
+    height: 30px;
+    line-height: 30px;
   }
   #service .searchCurriculum, #service .PE, #service .wordType, #service .ershou, #service .lecture, #service .post, #service .searchGrade, #service .evaluate {
     margin-left: 5%;
@@ -1627,6 +1701,7 @@ body {
   #service .evaluate a {
     float: inherit;
     left: 50%;
+    height: 140px;
     transform: translateX(-50%);
   }
   #service .more {
@@ -1637,8 +1712,46 @@ body {
   #service .more:hover {
     transform: translateX(-50%);
   }
-  #map .content{
-    width: 90%;
+  #map{
+    height: 160px;
+    .content{
+      width: 90%;
+      margin: 45px auto auto;
+      h1{
+        font-size: 1.7rem;
+      }
+      a{
+        font-size: 0.4rem;
+        width: 100px;
+        height: 28px;
+        line-height: 28px;
+        margin: 16px auto auto;
+      }
+    }
+  }
+  #footer .row{
+    padding-top: 25px;
+    .links{
+          padding-bottom: 13px;
+      label {
+        font-size: 1.2rem;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 13px;
+      } 
+      .content{
+        padding-top: 5px;
+        li {
+          font-size: 0.4rem;
+          line-height: 1.2rem;
+          margin-right: 20px;  
+        }
+      }    
+    }
+    .copyright {
+      font-size: 0.4rem;
+      line-height: 1.2rem;
+      margin-bottom: 30px;
+    }
   }
 }
 #CssGaga {

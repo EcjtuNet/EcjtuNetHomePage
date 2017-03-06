@@ -233,7 +233,7 @@ body {
   position: relative;
 }
 #header .topbar {
-  padding: 33px 0 23px;
+  padding: 23px 0 13px;
   color: #2ea7c9;
   z-index: 999;
 }
@@ -405,6 +405,17 @@ body {
 }
 #header .navbar-gray .navbar-header .icon-bar {
   background-color: #2ea7c9;
+}
+#header .navbar-gray .navbar-header .logo_slide {
+  width: 1.875rem;
+  height: 1.875rem;
+  float: left;
+  margin-top: -0.3rem;
+  display: inline-block;
+}
+#header .navbar-gray .navbar-header .rixin_name {
+  float: left;
+  margin-left: 4px;
 }
 #header .navbar-gray #navbar li {
   border-left: 1px solid #E9E9E9;
@@ -592,26 +603,26 @@ body {
   transition: all 0.4s ease;
 }
 /*更多咨询部分*/
-#consult {
+#moreNews {
   width: 100%;
   float: left;
 }
-#consult h1 {
+#moreNews h1 {
   font-size: 3.5rem;
   color: #2ea7c9;
   text-align: center;
   margin: 4rem auto 5rem;
 }
-#consult .content {
+#moreNews .content {
   width: 100%;
   float: left;
   margin-bottom: 5rem;
   font-size: 1.13rem;
 }
-#consult .content .part {
+#moreNews .content .part {
   margin-bottom: 2.3rem;
 }
-#consult .content .part .icon {
+#moreNews .content .part .icon {
   width: 5.125rem;
   height: 5.125rem;
   float: left;
@@ -620,11 +631,11 @@ body {
   margin: auto 2rem auto 2.5rem;
   position: relative;
 }
-#consult .content .part .icon1 {
+#moreNews .content .part .icon1 {
   background-color: #97CB6F;
-  /* background-image: url(../newPicture/consult1.png); */
+  /* background-image: url(../newPicture/moreNews1.png); */
 }
-#consult .content .part .icon1 .innerpic {
+#moreNews .content .part .icon1 .innerpic {
   position: absolute;
   width: 49px;
   height: 41px;
@@ -635,11 +646,11 @@ body {
   background-position: -188px -362px;
   background-repeat: no-repeat;
 }
-#consult .content .part .icon2 {
+#moreNews .content .part .icon2 {
   background-color: #B88CCF;
-  /* background-image: url(../newPicture/consult2.png); */
+  /* background-image: url(../newPicture/moreNews2.png); */
 }
-#consult .content .part .icon2 .innerpic {
+#moreNews .content .part .icon2 .innerpic {
   position: absolute;
   width: 49px;
   height: 47px;
@@ -650,11 +661,11 @@ body {
   background-position: -184px -313px;
   background-repeat: no-repeat;
 }
-#consult .content .part .icon3 {
+#moreNews .content .part .icon3 {
   background-color: #FF953A;
-  /* background-image: url(../newPicture/consult3.png); */
+  /* background-image: url(../newPicture/moreNews3.png); */
 }
-#consult .content .part .icon3 .innerpic {
+#moreNews .content .part .icon3 .innerpic {
   position: absolute;
   width: 45px;
   height: 51px;
@@ -665,11 +676,11 @@ body {
   background-position: -184px -260px;
   background-repeat: no-repeat;
 }
-#consult .content .part .icon4 {
+#moreNews .content .part .icon4 {
   background-color: #6AC7C1;
-  /* background-image: url(../newPicture/consult4.png); */
+  /* background-image: url(../newPicture/moreNews4.png); */
 }
-#consult .content .part .icon4 .innerpic {
+#moreNews .content .part .icon4 .innerpic {
   position: absolute;
   width: 52px;
   height: 40px;
@@ -680,43 +691,43 @@ body {
   background-position: -188px -405px;
   background-repeat: no-repeat;
 }
-#consult .content .part .part_content {
+#moreNews .content .part .part_content {
   float: left;
   width: 76%;
   height: 5.125rem;
   position: relative;
 }
-#consult .content .part .part_content h2 {
+#moreNews .content .part .part_content h2 {
   color: #838383;
   font-size: 1.25rem;
   font-weight: bold;
   float: left;
   margin-left: 1.5rem;
 }
-#consult .content .part .part_content .more {
+#moreNews .content .part .part_content .more {
   display: block;
   float: right;
   color: #838383;
   font-size: 1.25rem;
   font-weight: bold;
 }
-#consult .content .part .part_content .more:hover {
+#moreNews .content .part .part_content .more:hover {
   text-decoration: underline;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-#consult .content .part .part_content ul {
+#moreNews .content .part .part_content ul {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
 }
-#consult .content .part .part_content ul li {
+#moreNews .content .part .part_content ul li {
   width: 100%;
 }
-#consult .content .part .part_content ul li a {
+#moreNews .content .part .part_content ul li a {
   display: block;
   padding-top: 0.7rem;
   overflow: hidden;
@@ -724,14 +735,14 @@ body {
   text-overflow: ellipsis;
   color: #999;
 }
-#consult .content .part .part_content ul li a:hover {
+#moreNews .content .part .part_content ul li a:hover {
   color: #064665;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-#consult .content .part .part_content ul li i {
+#moreNews .content .part .part_content ul li i {
   width: 10px;
   height: 10px;
   display: block;
@@ -741,19 +752,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#consult .content .part .part_content ul li .i1 {
+#moreNews .content .part .part_content ul li .i1 {
   border-radius: 50%;
   border: 1px solid #97CB6F;
 }
-#consult .content .part .part_content ul li .i2 {
+#moreNews .content .part .part_content ul li .i2 {
   border-radius: 50%;
   border: 1px solid #B88CCF;
 }
-#consult .content .part .part_content ul li .i3 {
+#moreNews .content .part .part_content ul li .i3 {
   border-radius: 50%;
   border: 1px solid #FF953A;
 }
-#consult .content .part .part_content ul li .i4 {
+#moreNews .content .part .part_content ul li .i4 {
   border-radius: 50%;
   border: 1px solid #6AC7C1;
 }
@@ -1272,9 +1283,6 @@ body {
   .container {
     width: 1060px;
   }
-  #header .topbar {
-    padding: 33px 0 23px;
-  }
   #header .topbar .navbar-left .nav_logo {
     width: 38px;
     height: 38px;
@@ -1369,40 +1377,40 @@ body {
     height: 7px;
     margin: 5px 15px auto auto;
   }
-  #consult h1 {
+  #moreNews h1 {
     font-size: 2.625rem;
     margin: 3.25rem auto 3.75rem;
   }
-  #consult .content {
-    margin-bottom: 5rem;
+  #moreNews .content {
+    margin-bottom: 3rem;
     font-size: 0.9rem;
   }
-  #consult .content .part {
+  #moreNews .content .part {
     margin-bottom: 1.6rem;
   }
-  #consult .content .part .icon {
+  #moreNews .content .part .icon {
     width: 4rem;
     height: 4rem;
     margin: auto 1.5rem auto 0;
   }
-  #consult .content .part .icon .innerpic {
+  #moreNews .content .part .icon .innerpic {
     transform: translate(-50%, -50%) scale(0.8);
   }
-  #consult .content .part .part_content h2 {
+  #moreNews .content .part .part_content h2 {
     font-size: 1rem;
     margin-left: 1rem;
   }
-  #consult .content .part .part_content .more {
+  #moreNews .content .part .part_content .more {
     font-size: 1rem;
   }
-  #consult .content .part .part_content ul {
+  #moreNews .content .part .part_content ul {
     height: 4rem;
     padding-left: 1rem;
   }
-  #consult .content .part .part_content ul li a {
+  #moreNews .content .part .part_content ul li a {
     padding-top: 0.7rem;
   }
-  #consult .content .part .part_content ul li a i {
+  #moreNews .content .part .part_content ul li a i {
     width: 7px;
     height: 7px;
     margin: 3px 10px auto auto;
@@ -1560,10 +1568,10 @@ body {
     width: 5rem;
     font-size: 1.1rem;
   }
-  #consult .content .part .icon {
+  #moreNews .content .part .icon {
     margin: auto 1.5rem auto 4rem;
   }
-  #consult .content .part .part_content {
+  #moreNews .content .part .part_content {
     width: 70%;
   }
   #service .searchCurriculum,
@@ -1587,13 +1595,16 @@ body {
   .navbar-toggle {
     margin-right: 0;
   }
+  #header .hot_img {
+    height: 12.5rem;
+  }
   #header .hot_img .motto {
     width: 80%;
     height: auto;
   }
   #news .nav {
     width: 100%;
-    margin: 2.5rem auto 3rem;
+    margin: 2.5rem auto 1.7rem;
   }
   #news .nav li {
     padding: 14px 25px;
@@ -1611,32 +1622,72 @@ body {
     color: #2ea7c9;
     font-size: 1.13rem;
   }
+  #tushuo {
+    padding: 0 10px;
+  }
   #tushuo .pic {
     width: 50%;
   }
-  #consult .content .part:nth-child(1) h2 {
+  #moreNews h1 {
+    font-size: 1.625rem;
+    margin: 2rem auto 1rem;
+  }
+  #moreNews .content {
+    margin-bottom: 1rem;
+  }
+  #moreNews .content .part {
+    margin: 0.8rem auto;
+  }
+  #moreNews .content .part:nth-child(1) h2 {
     color: #97CB6F;
   }
-  #consult .content .part:nth-child(2) h2 {
+  #moreNews .content .part:nth-child(2) h2 {
     color: #B88CCF;
   }
-  #consult .content .part:nth-child(3) h2 {
+  #moreNews .content .part:nth-child(3) h2 {
     color: #FF953A;
   }
-  #consult .content .part:nth-child(4) h2 {
+  #moreNews .content .part:nth-child(4) h2 {
     color: #6AC7C1;
   }
-  #consult .content .part .part_content {
+  #moreNews .content .part .icon {
+    margin: auto 1.5rem auto 4rem;
+  }
+  #moreNews .content .part .part_content {
     width: 100%;
   }
+  #moreNews .content .part .part_content h2 {
+    margin-left: 0;
+  }
+  #moreNews .content .part .part_content ul {
+    padding-left: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  #moreNews .content .part:nth-child(4) ul {
+    border-bottom: 0;
+  }
   #wechat {
-    height: 477px;
+    height: 280px;
     overflow: hidden;
   }
   #wechat .wrapper {
-    top: 3rem;
+    top: 2.4rem;
     bottom: auto;
     height: auto;
+  }
+  #wechat .wrapper .content {
+    width: 200px;
+    margin-right: 1.7rem;
+  }
+  #wechat .wrapper .content h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  #wechat .wrapper .content .btns {
+    margin: 0 35px auto 15px;
+  }
+  #wechat .wrapper .content .btns a {
+    transform: scale(0.5);
   }
   #wechat .wrapper .iphone,
   #wechat .wrapper .sina,
@@ -1647,20 +1698,33 @@ body {
   #wechat .wrapper .iphone2 {
     width: 140px;
     float: right;
-    margin: 2rem 70px auto auto;
+    margin: -25px 70px auto auto;
     display: block;
+    transform: scale(0.7);
   }
   #wechat .wrapper .sina2,
   #wechat .wrapper .qq2,
   #wechat .wrapper .wechat2 {
     width: 270px;
     float: right;
-    margin-top: 2rem;
+    margin-top: -25px;
     margin-right: 10px;
     display: none;
+    transform: scale(0.7);
   }
   #wechat .wrapper .qq2 {
     margin-right: 0;
+  }
+  #service .row {
+    padding-bottom: 17px;
+  }
+  #service h1 {
+    font-size: 1.625rem;
+    margin: 2rem auto 1.5rem;
+  }
+  #service .name {
+    height: 30px;
+    line-height: 30px;
   }
   #service .searchCurriculum,
   #service .PE,
@@ -1682,6 +1746,7 @@ body {
   #service .evaluate a {
     float: inherit;
     left: 50%;
+    height: 140px;
     transform: translateX(-50%);
   }
   #service .more {
@@ -1692,8 +1757,46 @@ body {
   #service .more:hover {
     transform: translateX(-50%);
   }
+  #map {
+    height: 160px;
+  }
   #map .content {
     width: 90%;
+    margin: 45px auto auto;
+  }
+  #map .content h1 {
+    font-size: 1.7rem;
+  }
+  #map .content a {
+    font-size: 0.4rem;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    margin: 16px auto auto;
+  }
+  #footer .row {
+    padding-top: 25px;
+  }
+  #footer .row .links {
+    padding-bottom: 13px;
+  }
+  #footer .row .links label {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 13px;
+  }
+  #footer .row .links .content {
+    padding-top: 5px;
+  }
+  #footer .row .links .content li {
+    font-size: 0.4rem;
+    line-height: 1.2rem;
+    margin-right: 20px;
+  }
+  #footer .row .copyright {
+    font-size: 0.4rem;
+    line-height: 1.2rem;
+    margin-bottom: 30px;
   }
 }
 #CssGaga {
