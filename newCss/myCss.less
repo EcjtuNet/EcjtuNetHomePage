@@ -584,6 +584,10 @@ body {
       height: 100%;
     &:hover{
       transform: scale(1.2);
+      -webkit-filter:brightness(.5);
+      -o-filter:brightness(.5);
+      -moz-filter:brightness(.5);
+      filter:brightness(.5);
       .transition(.7s);
     }  
     }
@@ -1542,14 +1546,40 @@ body {
   .navbar-toggle{
     margin-right: 0;
   }
-  #header .hot_img{
-    height: 12.5rem;
-    .motto {
-      width: 80%;
-      height: auto;
-    } 
-  }
-  
+  #header{
+    .navbar-gray .navbar-brand {
+      width: 120px;
+      height: 50px;
+      padding: 10px 15px;
+      .logo_slide{
+        margin-top: 0;
+        float: left;
+      }
+      .rixin_desc{
+        width: 50px;
+        float: left;
+        margin-left: 0.3rem;
+        .rixin_name{
+          font-size: 1.06rem;
+          float: left;
+          margin-left: 0;
+        }
+        .rixin_name2{
+          font-size: 0.9rem;
+          line-height: 0.9rem;
+          float: left;
+          margin-left: 3px;
+        }
+      }
+    }
+    .hot_img{
+      height: 12.5rem;
+      .motto {
+        width: 80%;
+        height: auto;
+      } 
+    }
+  } 
   #news{
     .nav{
       width: 100%;
@@ -1681,8 +1711,9 @@ body {
     padding-bottom: 17px;
   }
   #service h1{
+    //color: @blue_color;
     font-size: 1.625rem;
-    margin: 2rem auto 1.5rem;
+    margin: 2.2rem auto 1rem 1rem;
   }
   #service .name{
     height: 30px;
@@ -1701,8 +1732,8 @@ body {
   #service .evaluate a {
     float: inherit;
     left: 50%;
-    height: 140px;
-    transform: translateX(-50%);
+    height: 130px;
+    transform: translateX(-50%) scale(0.8);
   }
   #service .more {
     right: auto;
@@ -1718,11 +1749,11 @@ body {
       width: 90%;
       margin: 45px auto auto;
       h1{
-        font-size: 1.7rem;
+        font-size: 1.6rem;
       }
       a{
-        font-size: 0.4rem;
-        width: 100px;
+        font-size: 0.7rem;
+        width: 90px;
         height: 28px;
         line-height: 28px;
         margin: 16px auto auto;
@@ -1734,24 +1765,27 @@ body {
     .links{
           padding-bottom: 13px;
       label {
-        font-size: 1.2rem;
+        font-size: 1rem;
         border-bottom: 1px solid #e5e5e5;
         padding-bottom: 13px;
       } 
       .content{
         padding-top: 5px;
         li {
-          font-size: 0.4rem;
+          font-size: 0.7rem;
           line-height: 1.2rem;
           margin-right: 20px;  
         }
       }    
     }
     .copyright {
-      font-size: 0.4rem;
+      font-size: 0.7rem;
       line-height: 1.2rem;
       margin-bottom: 30px;
     }
+  }
+  #toTop{
+    transform: scale(0.8);
   }
 }
 #CssGaga {
