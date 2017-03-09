@@ -75,7 +75,6 @@ hoverDisplayBlock start
 		$(outTrigger).bind("mouseover", function(){
 			$(target).css("display","none");
 			$(target).siblings('.iphone').fadeIn("1000");
-			$(target).siblings('.iphone2').fadeIn("1000");
 		})
 	}
 	hoverDisplayBlock(".qq_btn",".qq, .qq2","#map,#service");
