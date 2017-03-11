@@ -555,6 +555,7 @@ body {
   margin: 4px 15px auto auto;
   border-radius: 50%;
   border: 1px solid #48C5EB;
+  background-color: #fff;
 }
 #news .content .part .part_content ul li a:visited i {
   background-color: #48C5EB;
@@ -798,6 +799,7 @@ body {
 }
 #wechat .wrapper .iphone2 {
   display: none;
+  margin-top: 8.3rem;
 }
 #wechat .wrapper .content {
   float: right;
@@ -1472,13 +1474,6 @@ body {
       height: 44px; */
     transform: scale(0.8);
   }
-  /*#wechat .wrapper .readmore {
-    width: 195px;
-    height: 65px;
-    line-height: 65px;
-    font-size: 1.25rem;
-    box-shadow: -3px 3px 6px 1px #cbcbcb;
-  }*/
   #service h1 {
     font-size: 50px;
     font-size: 3.125rem;
@@ -1830,7 +1825,4 @@ body {
   #toTop {
     transform: scale(0.8);
   }
-}
-#CssGaga {
-  content: "160924170429,usr,334";
 }
