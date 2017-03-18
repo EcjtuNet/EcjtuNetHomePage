@@ -571,11 +571,16 @@ body {
   float: left;
   overflow: hidden;
 }
-#tushuo .pic img {
+#tushuo .pic a {
+  display: block;
   width: 100%;
   height: 100%;
 }
-#tushuo .pic img:hover {
+#tushuo .pic a img {
+  width: 100%;
+  height: 100%;
+}
+#tushuo .pic a img:hover {
   transform: scale(1.2);
   -webkit-filter: brightness(0.5);
   -o-filter: brightness(0.5);
