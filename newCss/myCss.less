@@ -255,7 +255,7 @@ body {
   position: relative;
 }
 #header .topbar {
-  padding: 23px 0 13px;
+  padding: 17px 0 10px;
   color: @blue_color;
   z-index: 999;
 }
@@ -441,6 +441,10 @@ body {
           padding: 1.5rem 1.75rem;//24px 28px
         }  
       }
+      .dropdown-menu li a{
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+      }
     } 
   }  
   .hot_img{
@@ -604,6 +608,7 @@ body {
     .more{
       display: block;
       width: 7.5rem;//118px
+      height: auto;
       font-size: 1.875rem;//30px
       color: #fff;
       position: absolute;
@@ -1047,13 +1052,13 @@ body {
   height: 426px;
   position: relative;
 }
-#map .wrapper {
+#map .wrapper, #map .wrapper img{
   width: 100%;
   height: 100%;
   float: left;
-  background: url(../newPicture/map.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  //background: url(../newPicture/map.jpg);
+  //background-size: cover;
+  //background-repeat: no-repeat;
   .transition (.3s);
 }
 #map .content {
